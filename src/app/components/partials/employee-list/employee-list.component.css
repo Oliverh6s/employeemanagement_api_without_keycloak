@@ -1,0 +1,182 @@
+.flex-container {
+  background-color: var(--main-Head-list-bg);
+  display: flex;
+  flex-direction: column;
+  height: calc(100vh - 60px);
+  width: 100%;
+  padding: 20px;
+  color: var(--main-text-color);
+}
+
+.flex-container > div {
+  width: 100%;
+  background: none;
+  padding: 8px;
+}
+
+.searchDiv {
+  flex-grow: 0;
+  flex-shrink: 1;
+  padding: 10px;
+}
+
+.input-container {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.searchInput__Container {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+}
+
+input {
+  padding-right: 40px;
+  padding-left: 40px;
+  height: 50px;
+  font-size: 16px;
+}
+
+.searchInput__SearchIcon {
+  position: absolute;
+  top: 50%;
+  left: 10px;
+  color: var(--main-green);
+  transform: translateY(-50%);
+  font-weight: bold;
+}
+
+.closeBtn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 35px;
+  height: 35px;
+  padding: 0;
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+  font-weight: bold;
+  background-color: #565555;
+  color: var(--main-text-color);
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.15s ease-in-out;
+}
+
+button:hover {
+  background-color: var(--hover-button-grey);
+}
+
+form {
+  flex-grow: 1;
+}
+
+input {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #394240;
+  border-radius: 4px;
+  font-size: 14px;
+  color: var(--main-text-color);
+  background-color: var(--main-card-bg);
+}
+
+input::placeholder {
+  color: #999999;
+}
+
+input:focus {
+  outline: none;
+  border-color: var(--main-green);
+}
+
+.listDiv {
+  flex-grow: 1;
+  flex-shrink: 1;
+  overflow: auto;
+  font-size: larger;
+  padding: 10px;
+}
+
+.employeeList {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.einzelnerMitarbeiter {
+  position: relative;
+  overflow: hidden;
+  padding: 2rem;
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+  user-select: none;
+  background-color: var(--main-card-bg);
+  margin-bottom: 10px;
+  border-radius: 8px;
+  cursor: pointer;
+  /* border: 1px solid black; Border für light */
+}
+
+.einzelnerMitarbeiter:hover {
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  transform: translateY(-2px);
+  color: var(--main-green);
+}
+
+.addDiv {
+  /* border-top: 1px solid black; Für light only */
+  padding: 10px;
+}
+
+.btnAdd {
+  width: 100%;
+  align-items: center;
+  background-clip: padding-box;
+  background-color: var(--main-green);
+  /* border: 1px solid black; Border für light */
+  border-radius: 8px;
+  /* box-shadow: rgba(0, 0, 0, 0.02) 0 1px 3px 0; */
+  border:none;
+  color: var(--main-text-color);
+  cursor: pointer;
+  display: inline-flex;
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  justify-content: center;
+  line-height: 1.25;
+  min-height: 3rem;
+  padding: calc(0.875rem - 1px) calc(1.5rem - 1px);
+  position: relative;
+  text-decoration: none;
+  transition: all 250ms;
+  user-select: none;
+}
+
+.btnAdd:hover {
+  /* transform: translateY(-1px); */
+}
+
+.btnAdd:active {
+  background-color: #1e5f74;
+  box-shadow: rgba(0, 0, 0, 0.06) 0 2px 4px;
+  /* transform: translateY(0); */
+}
+
+.buttonContent__Wrapper {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 4px;
+}
+
+.buttonText {
+  margin: 0;
+  font-size: 20px;
+}
+

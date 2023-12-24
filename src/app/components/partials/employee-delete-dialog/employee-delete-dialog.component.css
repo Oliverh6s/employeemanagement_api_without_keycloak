@@ -1,0 +1,42 @@
+.action-button {
+  min-width: 100px;
+  font-size: 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  padding: 10px;
+}
+.employee-delete-button {
+  border: none;
+  background-color: var(--main-button-red);
+  color: var(--main-button-red);
+  transition: box-shadow 0.2s ease-in-out, background-color 0.2s ease-in-out;
+}
+.employee-delete-button:hover {
+  background-color: var(--main-button-red);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+.employee-cancel-button {
+  border: 1px solid rgba(255, 255, 255, 0.8);
+  background-color: unset;
+  color: rgba(255, 255, 255, 1);
+  transition: border-color 0.2s ease-in-out, color 0.2s ease-in-out;
+}
+.employee-cancel-button:hover {
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  color: rgba(255, 255, 255, 0.7);
+}
+.employee-delete-button-wrapper {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  justify-content: flex-end;
+}
+.employee-delete-dialog-content {
+  color: var(--main-text-color);
+}
+.employee-delete-dialog-title {
+  color: var(--main-text-color);
+}
+p {
+  margin: 0;
+}

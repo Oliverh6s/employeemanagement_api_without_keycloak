@@ -1,0 +1,26 @@
+<header>
+  <div class="header__container">
+    <a href="/" class="logo">
+      <img class="logo__image" alt="Logo" src="assets/HiTec-Logo-only_nobackground.png">
+      <h3 class="logo__name">HiTec</h3>
+    </a>
+    <div class="header__title__wrapper">
+      <h1 class="header__title">EMS-Dashboard</h1>
+    </div>
+    <button [(colorPicker)]="color" class="colorPickerBtn" (colorPickerChange)="colorChangePicker()">
+      <img src="assets/color-picker.png" alt="Color Picker">
+    </button>
+
+    <button (click)="colorDefault()">Default</button>
+    
+    
+        <div class="button-wrapper">
+      <label class="ui-switch">
+        <input type="checkbox" id="myCheck" (click)="changeColor()" checked>
+        <div class="slider">
+          <div class="circle"></div>
+        </div>
+      </label>
+    </div>
+  </div>
+</header>

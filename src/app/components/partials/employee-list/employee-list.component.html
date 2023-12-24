@@ -1,0 +1,48 @@
+<div class="flex-container">
+  <div class="searchDiv">
+    <div class="input-container">
+
+      <app-toggle-sort-button  (click)="toggleSort()"></app-toggle-sort-button>
+      <div class="searchInput__Container">
+        <form [formGroup]="searchForm">
+          <mat-icon class="searchInput__SearchIcon">search</mat-icon>
+          <input
+            style="padding-left: 40px;"
+            formControlName="searchTerm"
+            placeholder="Suche nach Mitarbeitern"
+            #searchInput
+          />
+          <button
+            class="closeBtn"
+            *ngIf="searchForm.get('searchTerm')?.value !== ''"
+            (click)="clearSearch()"
+            [@fade]
+          >
+            <mat-icon>close</mat-icon>
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <div class="listDiv">
+    <ul class="employeeList">
+      <li
+        *ngFor="let employee of filteredEmployees"
+        class="einzelnerMitarbeiter"
+        (click)="navigateToDetail(employee.id)"
+      >
+        <span>{{ employee.lastName }} {{ employee.firstName }}</span>
+      </li>
+    </ul>
+  </div>
+
+  <div class="addDiv">
+    <button class="btnAdd" (click)="openAddEmployeeDialog()">
+      <div class="buttonContent__Wrapper">
+        <mat-icon class="buttonIcon">add</mat-icon>
+        <p class="buttonText">Mitarbeiter:in hinzufügen</p>
+      </div>
+    </button>
+  </div>
+</div>

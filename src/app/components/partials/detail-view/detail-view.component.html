@@ -1,0 +1,59 @@
+<div class="flex-container">
+  <!-- ... andere Container ... -->
+  <div class="detailDiv" *ngIf="employeeData; else noEmployeeData">
+    <div class="detailContent">
+      <div class="nameSection tile">
+        <p class="detailTitle tileName">{{ employeeData.firstName }} {{ employeeData.lastName }}</p>
+      </div>
+      <div class="contactSection tile">
+        <div class="detailTile__Title__Container">
+          <mat-icon class="detailTile__Icon">call</mat-icon>
+          <p class="detailText tilePhone detailTile__Title">
+            Telefonnummer
+          </p>
+        </div>
+        <p>{{employeeData.phone}}</p>
+      </div>
+      <div class="addressSection tile">
+        <div class="detailTile__Title__Container">
+          <mat-icon class="detailTile__Icon">house</mat-icon>
+          <p class="tileAddress detailTile__Title">Adresse</p>
+        </div>
+        <p class="detailText tileAddress">Wohnort:</p>
+        <p class="detailTextEmployee">{{employeeData.city}}</p>
+        <p class="detailText tileAddress">PLZ:</p>
+        <p class="detailTextEmployee">{{employeeData.postcode}}</p>
+        <p class="detailText tileAddress">Straße:</p>
+        <p class="detailTextEmployee">{{employeeData.street}}</p>
+      </div>
+
+      <div class="buttonsSection">
+        <button class="editButton">
+          <div class="buttonContent__Wrapper">
+            <mat-icon class="buttonIcon">edit</mat-icon>
+            <p class="buttonText">
+              Bearbeiten
+            </p>
+          </div>
+        </button>
+        <button class="deleteButton" (click)="openDeleteEmployeeDialog()">
+          <div class="buttonContent__Wrapper">
+            <mat-icon class="buttonIcon">delete</mat-icon>
+            <p class="buttonText">
+              Löschen
+            </p>
+          </div>
+        </button>
+      </div>
+    </div>
+  </div>
+  <ng-template #noEmployeeData>
+    <div class="detailDiv">
+      <div class="noEmployeeBackground">
+        <div class="noEmployeeDiv">
+          <p class="noEmployeeMessage">Bitte wähle einen Mitarbeiter aus</p>
+        </div>
+      </div>
+    </div>
+  </ng-template>
+</div>
