@@ -3,10 +3,15 @@ import { FormBuilder, FormGroup } from '@angular/forms';
 import { EmployeeService } from 'src/app/services/employee.Service';
 import { Employees } from 'src/app/shared/models/employees';
 import { ActivatedRoute, Router } from '@angular/router';
-import { trigger, state, style, animate, transition } from '@angular/animations';
+import {
+  trigger,
+  state,
+  style,
+  animate,
+  transition,
+} from '@angular/animations';
 import { MatDialog } from '@angular/material/dialog';
 import { EmployeeDialogComponent } from '../employee-dialog/employee-dialog.component';
-
 
 @Component({
   selector: 'app-employee-list',
@@ -20,7 +25,6 @@ import { EmployeeDialogComponent } from '../employee-dialog/employee-dialog.comp
   ],
 })
 export class EmployeeListComponent implements OnInit {
-
   employees: Employees[] = [];
   filteredEmployees: Employees[] = [];
   searchForm: FormGroup;
@@ -36,10 +40,10 @@ export class EmployeeListComponent implements OnInit {
     private dialog: MatDialog
   ) {
     this.searchForm = this.fb.group({
-      searchTerm: ['']
+      searchTerm: [''],
     });
 
-    this.searchForm.get('searchTerm')?.valueChanges.subscribe(searchTerm => {
+    this.searchForm.get('searchTerm')?.valueChanges.subscribe((searchTerm) => {
       this.filterEmployees(searchTerm);
     });
   }
@@ -49,7 +53,7 @@ export class EmployeeListComponent implements OnInit {
   }
 
   loadAndSortEmployees() {
-    this.employeeService.getAll().subscribe(data => {
+    this.employeeService.getAll().subscribe((data) => {
       this.employees = data;
       this.filterEmployees(this.searchForm.get('searchTerm')?.value);
     });
@@ -57,9 +61,10 @@ export class EmployeeListComponent implements OnInit {
 
   filterEmployees(searchTerm: string) {
     searchTerm = searchTerm.toLowerCase();
-    this.filteredEmployees = this.employees.filter(employee =>
-      employee.firstName.toLowerCase().includes(searchTerm) ||
-      employee.lastName.toLowerCase().includes(searchTerm)
+    this.filteredEmployees = this.employees.filter(
+      (employee) =>
+        employee.firstName.toLowerCase().includes(searchTerm) ||
+        employee.lastName.toLowerCase().includes(searchTerm)
     );
     this.applySort();
   }
@@ -74,7 +79,9 @@ export class EmployeeListComponent implements OnInit {
     this.filteredEmployees.sort((a, b) => {
       const nameA = `${a.lastName} ${a.firstName}`.toLowerCase();
       const nameB = `${b.lastName} ${b.firstName}`.toLowerCase();
-      return this.isAscendingSort ? nameA.localeCompare(nameB) : nameB.localeCompare(nameA);
+      return this.isAscendingSort
+        ? nameA.localeCompare(nameB)
+        : nameB.localeCompare(nameA);
     });
   }
 
@@ -82,15 +89,12 @@ export class EmployeeListComponent implements OnInit {
     this.router.navigate(['/employee', employeeId]);
   }
 
-
   openAddEmployeeDialog() {
     const dialogRef = this.dialog.open(EmployeeDialogComponent, {
       // You can add dialog configuration options here
     });
 
-
-
-    dialogRef.afterClosed().subscribe(result => {
+    dialogRef.afterClosed().subscribe((result) => {
       console.log(`Dialog result: ${result}`);
       // Process the result if needed
     });
@@ -104,5 +108,4 @@ export class EmployeeListComponent implements OnInit {
       this.searchInput.nativeElement.focus();
     }
   }
-
 }
