@@ -29,7 +29,7 @@
     <ul class="employeeList">
       <li
         *ngFor="let employee of filteredEmployees"
-        class="einzelnerMitarbeiter"
+        class="einzelnerMitarbeiter"  
         (click)="navigateToDetail(employee.id)"
       >
         <span>{{ employee.lastName }} {{ employee.firstName }}</span>

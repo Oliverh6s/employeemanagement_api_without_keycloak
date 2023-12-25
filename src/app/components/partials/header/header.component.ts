@@ -45,8 +45,4 @@ export class HeaderComponent implements OnInit {
     // Ändern Sie die Variable --main-green basierend auf der ausgewählten Farbe
     document.body.style.setProperty('--main-green', this.color);
   }
-
-  colorDefault() {
-    // document.body.style.setProperty('--main-green');    default wert muss noch gemacht werden!!!!!!!!!!!!!!!!!!!!!!!!!!!
-  }
 }

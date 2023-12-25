@@ -1,4 +1,6 @@
 /* You can add global styles to this file, and also import other style files */
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+
 @import url("https://fonts.googleapis.com/css2?family=Quicksand&display=swap");
 
 * {
@@ -92,4 +94,13 @@ body.Light {
   --hover-submit-green: #45a049;
   --disabled-button-grey: #555;
   --hover-button-grey: #424141;
+}
+
+html,
+body {
+  height: 100%;
+}
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
 }

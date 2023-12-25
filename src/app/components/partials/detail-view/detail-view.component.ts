@@ -31,14 +31,14 @@ export class DetailViewComponent implements OnInit {
     this.employeeService.getEmployeeById(this.employeeId).subscribe(
       data => {
         this.employeeData = data;
-        console.log(data)
+        console.log('Employee Data:', data);
       },
       error => {
         console.error('Error loading employee data:', error);
       }
     );
   }
-
+  
   openDeleteEmployeeDialog() {
     const dialogRef = this.dialog.open(EmployeeDeleteDialogComponent, {
       data: { employee: this.employeeData },

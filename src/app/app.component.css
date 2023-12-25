@@ -25,4 +25,5 @@
   flex-basis: auto;
   align-self: auto;
   order: 0;
+  max-width: 75%;
 }
