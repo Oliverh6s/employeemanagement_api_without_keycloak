@@ -35,6 +35,10 @@ header {
   color: var(--main-green);
 }
 
+.logo__name::selection {
+  color: var(--main-text-color); /*Sonst invertiert er die markierung*/
+}
+
 .header__title__wrapper {
   position: absolute;
   left: 50%;

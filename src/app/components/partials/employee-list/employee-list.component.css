@@ -48,6 +48,7 @@ input {
   font-weight: bold;
 }
 
+
 .closeBtn {
   display: flex;
   align-items: center;
@@ -141,7 +142,7 @@ input:focus {
   /* border: 1px solid black; Border für light */
   border-radius: 8px;
   /* box-shadow: rgba(0, 0, 0, 0.02) 0 1px 3px 0; */
-  border:none;
+  border: none;
   color: var(--main-text-color);
   cursor: pointer;
   display: inline-flex;
@@ -179,4 +180,3 @@ input:focus {
   margin: 0;
   font-size: 20px;
 }
-

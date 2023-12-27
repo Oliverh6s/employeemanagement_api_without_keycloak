@@ -1,4 +1,4 @@
-<div class="addEmployeeForm">
+<!-- <div class="addEmployeeForm">
   <h1>Mitarbeiter hinzufügen</h1>
 
   <form #addEmployeeForm="ngForm" (ngSubmit)="addEmployee(addEmployeeForm.value)">
@@ -61,4 +61,57 @@
       <button type="button" class="employee-cancel-button" (click)="abbrechen()">Abbrechen</button>
     </div>
   </form>
-</div>
+</div> -->
+
+
+
+<form class="example-form">
+
+  <h1>Mitarbeiter hinzufügen</h1>
+
+  <table class="example-full-width" cellspacing="0"><tr>
+    <td>
+      <mat-form-field class="example-full-width">
+      <mat-label>Vorname</mat-label>
+      <input matInput>
+      </mat-form-field>
+  </td>
+  <td>
+      <mat-form-field class="example-full-width">
+      <mat-label>Nachname</mat-label>
+      <input matInput>
+      </mat-form-field>
+  </td>
+  </tr>
+  </table>
+
+  <p>
+      <mat-form-field class="example-full-width">
+      <mat-label>Telefonnummer</mat-label>
+      <input matInput>
+      <mat-icon matSuffix>call</mat-icon>
+      </mat-form-field>
+      
+      <mat-form-field class="example-full-width">
+      <mat-label>Straße / Hausnummer</mat-label>
+      <input matInput>
+    </mat-form-field>
+  </p>
+
+  <table class="example-full-width" cellspacing="0"><tr>
+    <td>
+      <mat-form-field class="example-full-width">
+      <mat-label>Stadt</mat-label>
+      <input matInput>
+      </mat-form-field>
+  </td>
+  <td>
+      <mat-form-field class="example-full-width">
+      <mat-label>PLZ</mat-label>
+      <input matInput #postalCode maxlength="5">
+      <mat-hint align="start">{{postalCode.value.length}} / 5</mat-hint>
+      </mat-form-field>
+  </td>
+  </tr>
+  </table>
+</form>

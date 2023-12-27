@@ -2,30 +2,41 @@
   <!-- ... andere Container ... -->
   <div class="detailDiv" *ngIf="employeeData; else noEmployeeData">
     <div class="detailContent">
-      <div class="nameSection tile">
-        <p class="detailTitle tileName">{{ employeeData.firstName }} {{ employeeData.lastName }}</p>
-      </div>
-      <div class="contactSection tile">
-        <div class="detailTile__Title__Container">
-          <mat-icon class="detailTile__Icon">call</mat-icon>
-          <p class="detailText tilePhone detailTile__Title">
-            Telefonnummer
-          </p>
-        </div>
-        <p>{{employeeData.phone}}</p>
-      </div>
-      <div class="addressSection tile">
-        <div class="detailTile__Title__Container">
-          <mat-icon class="detailTile__Icon">house</mat-icon>
-          <p class="tileAddress detailTile__Title">Adresse</p>
-        </div>
-        <p class="detailText tileAddress">Wohnort:</p>
-        <p class="detailTextEmployee">{{employeeData.city}}</p>
-        <p class="detailText tileAddress">PLZ:</p>
-        <p class="detailTextEmployee">{{employeeData.postcode}}</p>
-        <p class="detailText tileAddress">Straße:</p>
-        <p class="detailTextEmployee">{{employeeData.street}}</p>
-      </div>
+      
+      <mat-card>
+          <mat-card-header>
+          <mat-icon mat-card-avatar>person</mat-icon>
+          <mat-card-title>Name:</mat-card-title>
+          </mat-card-header>
+          <mat-card-content>
+          <mat-card-subtitle>{{employeeData.firstName}} {{employeeData.lastName}}</mat-card-subtitle>
+          </mat-card-content>
+       </mat-card>
+
+       <mat-card>
+          <mat-card-header>
+          <mat-icon mat-card-avatar>call</mat-icon>
+          <mat-card-title>Telefonnummer:</mat-card-title>
+          </mat-card-header>
+          <mat-card-content>
+          <mat-card-subtitle>{{employeeData.phone}}</mat-card-subtitle>
+          </mat-card-content>
+       </mat-card>
+
+       <mat-card>
+        <mat-card-header>
+          <mat-icon mat-card-avatar>home</mat-icon>
+          <mat-card-title>Adresse:</mat-card-title>
+        </mat-card-header>
+        <mat-card-content>
+          <mat-card-title>Wohnort:</mat-card-title>
+          <mat-card-subtitle>{{employeeData.city}}</mat-card-subtitle>
+          <mat-card-title>PLZ:</mat-card-title>
+          <mat-card-subtitle>{{employeeData.postcode}}</mat-card-subtitle>
+          <mat-card-title>Straße:</mat-card-title>
+          <mat-card-subtitle>{{employeeData.street}}</mat-card-subtitle>
+        </mat-card-content>
+       </mat-card>
 
       <div class="buttonsSection">
         <button class="editButton">
@@ -48,11 +59,14 @@
     </div>
   </div>
   <ng-template #noEmployeeData>
+    
     <div class="detailDiv">
       <div class="noEmployeeBackground">
-        <div class="noEmployeeDiv">
-          <p class="noEmployeeMessage">Bitte wähle einen Mitarbeiter aus</p>
-        </div>
+        
+        <mat-card>
+          <mat-card-content>Bitte wähle einen Mitarbeiter aus.</mat-card-content>
+        </mat-card>
+        
       </div>
     </div>
   </ng-template>

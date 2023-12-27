@@ -17,63 +17,7 @@
 }
 
 
-.nameSection {
-  /* border: 1px solid black; Border für light */
-  grid-area: name;
-  padding: 20px;
-  border-radius: 8px;
-}
-
-.contactSection {
-  /* border: 1px solid black; Border für light */
-  grid-area: contact;
-  padding: 20px;
-  border-radius: 8px;
-}
-
-.addressSection {
-  /* border: 1px solid black; Border für light */
-  grid-area: address;
-  padding: 20px;
-  border-radius: 8px;
-}
-
-.skillsSection {
-  /* border: 1px solid black; Border für light */
-  grid-area: skills;
-  padding: 20px;
-  border-radius: 8px;
-}
-
-.detailTitle {
-  font-size: 1.5rem;
-  font-weight: bold;
-  color: var(--main-text-color);
-}
-
-.tile {
-  background-color: var(--main-card-bg);
-  padding: 15px;
-  border-radius: 8px;
-  margin-bottom: 10px;
-  transition: box-shadow 0.3s ease;
-}
-
-.tileName {
-  font-size: 1.2rem;
-  font-weight: bold;
-  color: var(--main-text-color);
-}
-
-.tilePhone,
-.tileAddress,
-.tileSkills {
-  font-size: 1.5rem;
-  color: var(--main-text-color);
-}
-
-/* Hinzugefügte Hover-Stile für zusätzliche Interaktivität */
-.tile:hover {
+.tile:hover{ /* { Dass muss noch angepasst werden  */
   box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.15);
 }
 
@@ -118,23 +62,7 @@
   margin: 0;
 }
 
-.detailTile__Title {
-  font-weight: bold;
-  letter-spacing: 1px;
-}
-.detailTile__skillList {
-  padding-left: 20px;
-}
 
-.detailTile__Title__Container {
-  display: flex;
-  flex-direction: row;
-  align-content: center;
-  gap: 3px;
-}
-.detailTile__Icon {
-  font-size: 20px;
-}
 
 .buttonContent__Wrapper {
   display: flex;
@@ -156,7 +84,16 @@
   background-color: var(--main-button-red);
 }
 
-.detailTextEmployee {
-  font-size: 1.5rem;
+
+mat-card {
+  background-color: var(--main-card-bg);
+  color: var(--main-text-color);
+  margin: 0.5rem;
+}
+
+mat-card-header {
+  color: var(--main-text-color);
+}
+mat-card-subtitle {
   color: var(--main-text-color);
 }

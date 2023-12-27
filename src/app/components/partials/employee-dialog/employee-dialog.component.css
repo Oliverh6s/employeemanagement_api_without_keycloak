@@ -1,24 +1,24 @@
 /* Add this to your existing CSS file */
 
-.addEmployeeForm {
+/* .addEmployeeForm {
   max-width: 400px;
   margin: 0 auto;
   padding: 20px;
 
   color: var(--main-text-color);
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4); /* Slightly stronger shadow */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4); /* Slightly stronger shadow 
   max-height: 100vh;
 }
 
 h1 {
-  font-size: 1.8rem; /* Larger font size for headings */
+  font-size: 1.8rem; /* Larger font size for headings */ /*
   margin-bottom: 20px;
   color: var(--main-text-color);
 }
 
 .formGroup {
   display: flex;
-  flex-direction: column; /* Stack inputs vertically */
+  flex-direction: column; /* Stack inputs vertically */ /*
   margin-bottom: 15px;
 }
 
@@ -27,7 +27,7 @@ h1 {
 }
 
 label {
-  font-size: 1rem; /* Moderate font size for labels */
+  font-size: 1rem; /* Moderate font size for labels */ /*
   margin-bottom: 5px;
   font-weight: bold;
   color: var(--main-text-color); 
@@ -35,18 +35,18 @@ label {
 
 input {
   width: 100%;
-  padding: 12px; /* Increased padding for better touch experience */
+  padding: 12px; /* Increased padding for better touch experience */ /*
   box-sizing: border-box;
-  background-color: #555; /* Darker background color */
+  background-color: #555; /* Darker background color */ /*
   border: 1px solid #777; 
   border-radius: 6px;
-  color: var(--main-text-color); /* Light text color */
+  color: var(--main-text-color); /* Light text color */ /*
   transition: border-color 0.3s, box-shadow 0.3s;
 }
 
 .inputContainer {
   display: flex;
-  flex-direction: column; /* Stack buttons vertically */
+  flex-direction: column; /* Stack buttons vertically */ /*
   gap: 10px;
 }
 
@@ -56,8 +56,8 @@ input {
 }
 
 .submitButton
-/* .cancelButton*/ {
-  padding: 12px 20px; /* Increased padding for better touch experience */
+/* .cancelButton*/ /*{
+  padding: 12px 20px; /* Increased padding for better touch experience */ /*
   border: none;
   border-radius: 6px;
   cursor: pointer;
@@ -65,13 +65,13 @@ input {
 }
 
 .submitButton {
-  background-color: var(--main-submit-green); /* Green submit button color */
-  color: var(--main-text-color); /* White text color */
+  background-color: var(--main-submit-green); /* Green submit button color */ /*
+  color: var(--main-text-color); /* White text color */ /*
 }
 
 .cancelButton {
-  background-color: var(--main-button-red); /* Red cancel button color */
-  color: var(--main-text-color); /* White text color */
+  background-color: var(--main-button-red); /* Red cancel button color */ /*
+  color: var(--main-text-color); /* White text color */ /*
 }
 
 .submitButton:hover,
@@ -95,4 +95,29 @@ input {
 .employee-cancel-button:hover {
   border: 1px solid rgba(255, 255, 255, 0.5);
   color: rgba(255, 255, 255, 0.7);
+} 
+*/
+
+.example-form {
+  min-width: 150px;
+  max-width: 500px;
+  width: 100%;
+  padding: 50px;
+}
+
+.example-full-width {
+  width: 100%;
+  color: var(--main-text-color);
+}
+
+td {
+  padding-right: 8px;
+}
+
+mat-icon {
+  color: var(--main-text-color);
+}
+
+h1 {
+  color: var(--main-text-color);
 }
