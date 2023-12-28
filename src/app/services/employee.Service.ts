@@ -32,4 +32,14 @@ export class EmployeeService {
   deleteEmployeeById(employeeId: number) {
     return this.http.delete<Employee>(`${this.apiUrl}/${employeeId}`);
   }
+
+  updateEmployee(employeeId: number, Data: any) {
+    // Hier sollte der Server-Endpunkt entsprechend deiner Backend-Implementierung angepasst werden
+    return this.http.put(`${this.apiUrl}/${employeeId}`, Data).pipe(
+      catchError((error: any) => {
+        console.error('Fehler beim Aktualisieren des Mitarbeiters:', error);
+        throw error;
+      })
+    );
+  }
 }

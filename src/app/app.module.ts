@@ -9,9 +9,9 @@ import { FormsModule } from '@angular/forms';
 import { ColorPickerModule } from 'ngx-color-picker';
 import { MatInputModule } from '@angular/material/input';
 import { MatButtonModule } from '@angular/material/button';
-import {MatCardModule} from '@angular/material/card';
+import { MatCardModule } from '@angular/material/card';
 
-
+import { EditDialogComponent } from './components/partials/edit-dialog/edit-dialog.component';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './components/partials/header/header.component';
@@ -26,11 +26,12 @@ import { ToggleSortButtonComponent } from './components/partials/toggle-sort-but
     HeaderComponent,
     DetailViewComponent,
     EmployeeListComponent,
-    EmployeeDialogComponent,
+    EmployeeDialogComponent,    
+    EditDialogComponent,
+    
     
   ],
   imports: [
-
     MatCardModule,
     MatButtonModule,
     BrowserModule,
@@ -44,6 +45,8 @@ import { ToggleSortButtonComponent } from './components/partials/toggle-sort-but
     BrowserAnimationsModule,
     HttpClientModule,
     AppRoutingModule,
+    MatDialogModule,
+
   ],
   providers: [],
   bootstrap: [AppComponent],
