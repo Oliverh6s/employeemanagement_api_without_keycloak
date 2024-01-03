@@ -60,6 +60,5 @@ export class EditDialogComponent implements OnInit {
           // Hier könntest du eine Fehlermeldung anzeigen oder andere Maßnahmen ergreifen.
         }
       );
-    this.dialogRef.close();
   }
 }

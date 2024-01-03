@@ -1,117 +1,102 @@
-<!-- <div class="addEmployeeForm">
+<form #addEmployeeForm="ngForm" (ngSubmit)="addEmployee(addEmployeeForm.value)">
   <h1>Mitarbeiter hinzufügen</h1>
 
-  <form #addEmployeeForm="ngForm" (ngSubmit)="addEmployee(addEmployeeForm.value)">
-    <div class="formGroup">
-      <div class="flexInput">
-        <label for="lastName">Name:</label>
-        <input type="text" id="lastName" name="lastName" ngModel required maxlength="20"/>
-        <div *ngIf="addEmployeeForm.controls['lastName'].invalid && (addEmployeeForm.controls['lastName'].dirty || addEmployeeForm.controls['lastName'].touched)">
-          <div class="alert alert-danger">Name ist erforderlich.</div>
-        </div>
-      </div>
-      <div class="flexInput">
-        <label for="firstName">Vorname:</label>
-        <input type="text" id="firstName" name="firstName" ngModel required maxlength="20"/>
-        <div *ngIf="addEmployeeForm.controls['firstName'].invalid && (addEmployeeForm.controls['firstName'].dirty || addEmployeeForm.controls['firstName'].touched)">
-          <div class="alert alert-danger">Vorname ist erforderlich.</div>
-        </div>
-      </div>
-    </div>
-
-    <div class="formGroup">
-      <div class="flexInput">
-        <label for="city">Wohnort:</label>
-        <input type="text" id="city" name="city" ngModel required maxlength="20"/>
-        <div *ngIf="addEmployeeForm.controls['city'].invalid && (addEmployeeForm.controls['city'].dirty || addEmployeeForm.controls['city'].touched)">
-          <div class="alert alert-danger">Stadt ist erforderlich.</div>
-        </div>
-      </div>
-
-      <div class="flexInput">
-        <label for="postcode">PLZ:</label>
-        <input type="text" id="postcode" name="postcode" ngModel required maxlength="5" minlength="5"/>
-        <div *ngIf="addEmployeeForm.controls['postcode'].invalid && (addEmployeeForm.controls['postcode'].dirty || addEmployeeForm.controls['postcode'].touched)">
-          <div class="alert alert-danger">PLZ ist erforderlich und muss 5 Zahlen beinhalten.</div>
-        </div>
-      </div>
-    </div>
-
-    <div class="formGroup">
-      <div class="flexInput">
-        <label for="phone">Telefonnummer:</label>
-        <input type="text" id="phone" name="phone" ngModel required maxlength="20"/>
-        <div *ngIf="addEmployeeForm.controls['phone'].invalid && (addEmployeeForm.controls['phone'].dirty || addEmployeeForm.controls['phone'].touched)">
-          <div class="alert alert-danger">Telefonnummer ist erforderlich.</div>
-        </div>
-      </div>
-
-      <div class="flexInput">
-        <label for="street">Straße / Hausnummer:</label>
-        <input type="text" id="street" name="street" ngModel required maxlength="50"/>
-        <div *ngIf="addEmployeeForm.controls['street'].invalid && (addEmployeeForm.controls['street'].dirty || addEmployeeForm.controls['street'].touched)">
-          <div class="alert alert-danger">Straße / Hausnummer ist erforderlich.</div>
-        </div>
-      </div>
-    </div>
-
-
-    <div class="buttonGroup">
-      <button type="submit" class="submitButton" [disabled]="addEmployeeForm.invalid">Hinzufügen</button>
-      <button type="button" class="employee-cancel-button" (click)="abbrechen()">Abbrechen</button>
-    </div>
-  </form>
-</div> -->
-
-
-
-<form class="example-form">
-
-  <h1>Mitarbeiter hinzufügen</h1>
-
-  <table class="example-full-width" cellspacing="0"><tr>
-    <td>
-      <mat-form-field class="example-full-width">
-      <mat-label>Vorname</mat-label>
-      <input matInput>
-      </mat-form-field>
-  </td>
-  <td>
-      <mat-form-field class="example-full-width">
-      <mat-label>Nachname</mat-label>
-      <input matInput>
-      </mat-form-field>
-  </td>
-  </tr>
-  </table>
-
-  <p>
-      <mat-form-field class="example-full-width">
-      <mat-label>Telefonnummer</mat-label>
-      <input matInput>
-      <mat-icon matSuffix>call</mat-icon>
-      </mat-form-field>
-      
-      <mat-form-field class="example-full-width">
-      <mat-label>Straße / Hausnummer</mat-label>
-      <input matInput>
+  <div class="form-row">
+    <mat-form-field>
+      <mat-label for="lastName">Name:</mat-label>
+      <input
+        matInput
+        type="text"
+        id="lastName"
+        name="lastName"
+        ngModel
+        required
+        maxlength="20"
+      />
     </mat-form-field>
-  </p>
 
-  <table class="example-full-width" cellspacing="0"><tr>
-    <td>
-      <mat-form-field class="example-full-width">
-      <mat-label>Stadt</mat-label>
-      <input matInput>
-      </mat-form-field>
-  </td>
-  <td>
-      <mat-form-field class="example-full-width">
-      <mat-label>PLZ</mat-label>
-      <input matInput #postalCode maxlength="5">
-      <mat-hint align="start">{{postalCode.value.length}} / 5</mat-hint>
-      </mat-form-field>
-  </td>
-  </tr>
-  </table>
+    <mat-form-field>
+      <mat-label for="firstName">Vorname:</mat-label>
+      <input
+        matInput
+        type="text"
+        id="firstName"
+        name="firstName"
+        ngModel
+        required
+        maxlength="20"
+      />
+    </mat-form-field>
+  </div>
+
+  <div class="form-row">
+    <mat-form-field class="full-width">
+      <mat-label for="phone">Telefonnummer:</mat-label>
+      <input
+        matInput
+        type="text"
+        id="phone"
+        name="phone"
+        ngModel
+        required
+        maxlength="20"
+      />
+    </mat-form-field>
+  </div>
+
+  <div class="form-row">
+    <mat-form-field class="full-width">
+      <mat-label for="street">Straße / Hausnummer:</mat-label>
+      <input
+        matInput
+        type="text"
+        id="street"
+        name="street"
+        ngModel
+        required
+        maxlength="50"
+      />
+    </mat-form-field>
+  </div>
+
+  <div class="form-row">
+    <mat-form-field>
+      <mat-label for="city">Wohnort:</mat-label>
+      <input
+        matInput
+        type="text"
+        id="city"
+        name="city"
+        ngModel
+        required
+        maxlength="20"
+      />
+    </mat-form-field>
+
+    <mat-form-field>
+      <mat-label for="postcode">PLZ:</mat-label>
+      <input
+        matInput
+        type="text"
+        id="postcode"
+        name="postcode"
+        ngModel
+        required
+        maxlength="5"
+        minlength="5"
+      />
+    </mat-form-field>
+  
+</div>
+  <div class="buttonGroup">
+    <button mat-raised-button type="submit" color="primary" [disabled]="addEmployeeForm.invalid">
+      Hinzufügen
+    </button>
+    <button mat-raised-button color="warn" type="button" (click)="abbrechen()">
+      Abbrechen
+    </button>
+
+  
+  </div>
+  
 </form>

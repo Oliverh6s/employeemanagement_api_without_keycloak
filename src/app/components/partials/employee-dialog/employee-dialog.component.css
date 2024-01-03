@@ -1,123 +1,35 @@
-/* Add this to your existing CSS file */
-
-/* .addEmployeeForm {
-  max-width: 400px;
-  margin: 0 auto;
-  padding: 20px;
-
-  color: var(--main-text-color);
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4); /* Slightly stronger shadow 
-  max-height: 100vh;
+.form-row {
+  display: flex;
+  gap: 1rem;
+  margin-left: 1rem;
+  margin-right: 1rem;
+  margin-top: 1rem;
+  justify-content: space-evenly;
 }
 
 h1 {
-  font-size: 1.8rem; /* Larger font size for headings */ /*
-  margin-bottom: 20px;
   color: var(--main-text-color);
+  margin: 1rem;
 }
 
-.formGroup {
-  display: flex;
-  flex-direction: column; /* Stack inputs vertically */ /*
-  margin-bottom: 15px;
-}
-
-.flexInput {
-  margin-bottom: 10px;
-}
-
-label {
-  font-size: 1rem; /* Moderate font size for labels */ /*
-  margin-bottom: 5px;
-  font-weight: bold;
-  color: var(--main-text-color); 
-}
-
-input {
-  width: 100%;
-  padding: 12px; /* Increased padding for better touch experience */ /*
-  box-sizing: border-box;
-  background-color: #555; /* Darker background color */ /*
-  border: 1px solid #777; 
-  border-radius: 6px;
-  color: var(--main-text-color); /* Light text color */ /*
-  transition: border-color 0.3s, box-shadow 0.3s;
-}
-
-.inputContainer {
-  display: flex;
-  flex-direction: column; /* Stack buttons vertically */ /*
-  gap: 10px;
+.full-width {
+  flex: 1;
 }
 
 .buttonGroup {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-between; /* or space-evenly */
+  margin-top: 20px;
+  margin-bottom: 1rem;
+  margin-left: 1rem;
+  margin-right: 1rem;
 }
 
-.submitButton
-/* .cancelButton*/ /*{
-  padding: 12px 20px; /* Increased padding for better touch experience */ /*
-  border: none;
-  border-radius: 6px;
-  cursor: pointer;
-  transition: background-color 0.3s, box-shadow 0.3s;
+/* Adjust margin-bottom for buttonGroup if needed */
+.buttonGroup button {
+  flex-basis: 48%; /* or adjust based on your design */
 }
 
-.submitButton {
-  background-color: var(--main-submit-green); /* Green submit button color */ /*
-  color: var(--main-text-color); /* White text color */ /*
-}
-
-.cancelButton {
-  background-color: var(--main-button-red); /* Red cancel button color */ /*
-  color: var(--main-text-color); /* White text color */ /*
-}
-
-.submitButton:hover,
-.cancelButton:hover {
-  background-color: var(
-    --hover-submit-green
-  ); 
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-}
-
-.submitButton:disabled {
-  background-color: var(--disabled-button-grey);
-}
-
-.employee-cancel-button {
-  border: 1px solid rgba(255, 255, 255, 0.8);
-  background-color: unset;
-  color: var(--main-text-color);
-  transition: border-color 0.2s ease-in-out, color 0.2s ease-in-out;
-}
-.employee-cancel-button:hover {
-  border: 1px solid rgba(255, 255, 255, 0.5);
-  color: rgba(255, 255, 255, 0.7);
-} 
-*/
-
-.example-form {
-  min-width: 150px;
-  max-width: 500px;
-  width: 100%;
-  padding: 50px;
-}
-
-.example-full-width {
-  width: 100%;
-  color: var(--main-text-color);
-}
-
-td {
-  padding-right: 8px;
-}
-
-mat-icon {
-  color: var(--main-text-color);
-}
-
-h1 {
-  color: var(--main-text-color);
+.buttonGroup button:first-child {
+  margin-right: 4%; /* or adjust based on your design */
 }

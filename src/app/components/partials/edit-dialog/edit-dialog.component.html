@@ -101,7 +101,7 @@
     </tr>
   </table>
 
-  <button type="submit" [disabled]="!employeeForm.valid">
+  <button type="submit" (click)="updateEmployee()" [disabled]="!employeeForm.valid">
     Mitarbeiter aktualisieren
   </button>
 </form>

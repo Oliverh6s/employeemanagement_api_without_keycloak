@@ -155,6 +155,7 @@ header {
   border: none;
   background: none;
   margin-left: 85%;
+  color: var(--main-green);
 }
 
 img {
