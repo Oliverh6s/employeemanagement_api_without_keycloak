@@ -8,7 +8,7 @@
 .employee-delete-button {
   border: none;
   background-color: var(--main-button-red);
-  color: var(--main-button-red);
+  color: var(--main-text-color);
   transition: box-shadow 0.2s ease-in-out, background-color 0.2s ease-in-out;
 }
 .employee-delete-button:hover {
@@ -18,12 +18,12 @@
 .employee-cancel-button {
   border: 1px solid rgba(255, 255, 255, 0.8);
   background-color: unset;
-  color: rgba(255, 255, 255, 1);
+  color: var(--main-text-color);
   transition: border-color 0.2s ease-in-out, color 0.2s ease-in-out;
 }
 .employee-cancel-button:hover {
-  border: 1px solid rgba(255, 255, 255, 0.5);
-  color: rgba(255, 255, 255, 0.7);
+  border: 1px solid var(--main-text-color);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
 .employee-delete-button-wrapper {
   display: flex;
@@ -39,4 +39,8 @@
 }
 p {
   margin: 0;
+}
+
+.employee-delete-dialog-form {
+  background-color: var(--main-card-bg);
 }

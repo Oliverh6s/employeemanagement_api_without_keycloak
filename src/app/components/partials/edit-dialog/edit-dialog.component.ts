@@ -19,6 +19,7 @@ export class EditDialogComponent implements OnInit {
   tempStreet: string | undefined;
   tempCity: string | undefined;
   tempPostcode: string | undefined;
+  skillSet?: string[] | undefined;
 
   constructor(
     public dialogRef: MatDialogRef<EditDialogComponent>,
@@ -47,18 +48,22 @@ export class EditDialogComponent implements OnInit {
     this.employeeData.street = this.tempStreet;
     this.employeeData.city = this.tempCity;
     this.employeeData.postcode = this.tempPostcode;
+    this.employeeData.skillSet = [];
 
     this.employeeService
       .updateEmployee(this.employeeData.id, this.employeeData)
       .subscribe(
         (response) => {
           console.log('Mitarbeiter erfolgreich aktualisiert:', response);
-          // Hier könntest du eine Erfolgsmeldung anzeigen oder den Benutzer umleiten, wenn gewünscht.
+          this.handleClose();
         },
         (error) => {
           console.error('Fehler beim Aktualisieren des Mitarbeiters:', error);
-          // Hier könntest du eine Fehlermeldung anzeigen oder andere Maßnahmen ergreifen.
         }
       );
+  }
+
+  handleClose() {
+    this.dialogRef.close();
   }
 }

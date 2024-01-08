@@ -99,9 +99,10 @@
         </mat-form-field>
       </td>
     </tr>
-  </table>
+  
 
-  <button type="submit" (click)="updateEmployee()" [disabled]="!employeeForm.valid">
+  <button mat-raised-button type="submit" color="primary"  (click)="updateEmployee()" [disabled]="!employeeForm.valid">
     Mitarbeiter aktualisieren
   </button>
+</table>
 </form>

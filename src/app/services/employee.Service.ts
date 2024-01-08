@@ -20,7 +20,7 @@ export class EmployeeService {
     return this.http.get<Employees>(`${this.apiUrl}/${employeeId}`).pipe(
       catchError((error: any) => {
         console.error('Error in getEmployeeById:', error);
-        throw error; // Rethrow the error
+        throw error; 
       })
     );
   }
@@ -34,7 +34,6 @@ export class EmployeeService {
   }
 
   updateEmployee(employeeId: number, Data: any) {
-    // Hier sollte der Server-Endpunkt entsprechend deiner Backend-Implementierung angepasst werden
     return this.http.put(`${this.apiUrl}/${employeeId}`, Data).pipe(
       catchError((error: any) => {
         console.error('Fehler beim Aktualisieren des Mitarbeiters:', error);

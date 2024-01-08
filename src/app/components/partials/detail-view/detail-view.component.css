@@ -16,8 +16,8 @@
   color: var(--main-text-color); /* Hinzugefügt: Textfarbe auf Weiß setzen */
 }
 
-
-.tile:hover{ /* { Dass muss noch angepasst werden  */
+.tile:hover {
+  /* { Dass muss noch angepasst werden  */
   box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.15);
 }
 
@@ -62,8 +62,6 @@
   margin: 0;
 }
 
-
-
 .buttonContent__Wrapper {
   display: flex;
   flex-direction: row;
@@ -83,7 +81,6 @@
 .deleteButton {
   background-color: var(--main-button-red);
 }
-
 
 mat-card {
   background-color: var(--main-card-bg);
