@@ -15,18 +15,6 @@
       />
     </mat-form-field>
 
-
-
-    <div class="group">
-      <input required="" type="text" class="input">
-      <span class="highlight"></span>
-      <span class="bar"></span>
-      <label>Name</label>
-    </div>
-
-
-
-
     <mat-form-field>
       <mat-label for="firstName">Vorname:</mat-label>
       <input
@@ -98,17 +86,18 @@
         minlength="5"
       />
     </mat-form-field>
-  
-</div>
+  </div>
   <div class="buttonGroup">
-    <button mat-raised-button type="submit" color="primary" [disabled]="addEmployeeForm.invalid">
+    <button
+      mat-raised-button
+      type="submit"
+      color="primary"
+      [disabled]="addEmployeeForm.invalid"
+    >
       Hinzufügen
     </button>
     <button mat-raised-button color="warn" type="button" (click)="abbrechen()">
       Abbrechen
     </button>
-
-  
   </div>
-  
 </form>
