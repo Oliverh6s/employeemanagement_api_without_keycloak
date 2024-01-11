@@ -1,8 +1,7 @@
-<!-- edit-dialog.component.html -->
 <form #employeeForm="ngForm" (ngSubmit)="updateEmployee()">
-  <h1>Mitarbeiter bearbeiten</h1>
+  <h1>Mitarbeiter:in bearbeiten</h1>
 
-  <table class="example-full-width" cellspacing="0">
+  <table class="formTable" cellspacing="0">
     <tr>
       <td>
         <mat-form-field class="example-full-width">
@@ -16,6 +15,7 @@
             required
             maxlength="25"
           />
+          <mat-icon matSuffix>person</mat-icon>
         </mat-form-field>
       </td>
       <td>
@@ -30,6 +30,7 @@
             required
             maxlength="25"
           />
+          <mat-icon matSuffix>person</mat-icon>
         </mat-form-field>
       </td>
     </tr>
@@ -61,6 +62,7 @@
         required
         maxlength="50"
       />
+      <mat-icon matSuffix>location_on</mat-icon>
     </mat-form-field>
   </p>
 
@@ -78,6 +80,7 @@
             required
             maxlength="25"
           />
+          <mat-icon matSuffix>location_city</mat-icon>
         </mat-form-field>
       </td>
       <td>
@@ -95,6 +98,7 @@
             minlength="5"
             maxlength="5"
           />
+          <mat-icon matSuffix>local_post_office</mat-icon>
           <mat-hint align="start">{{ postalCode.value.length }} / 5</mat-hint>
         </mat-form-field>
       </td>
@@ -102,7 +106,7 @@
   
 
   <button mat-raised-button type="submit" color="primary"  (click)="updateEmployee()" [disabled]="!employeeForm.valid">
-    Mitarbeiter aktualisieren
+    Mitarbeiter:in aktualisieren
   </button>
 </table>
 </form>

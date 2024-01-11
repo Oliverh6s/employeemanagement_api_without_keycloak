@@ -139,9 +139,7 @@ input:focus {
   align-items: center;
   background-clip: padding-box;
   background-color: var(--main-green);
-  /* border: 1px solid black; Border für light */
   border-radius: 8px;
-  /* box-shadow: rgba(0, 0, 0, 0.02) 0 1px 3px 0; */
   border: none;
   color: var(--main-text-color);
   cursor: pointer;

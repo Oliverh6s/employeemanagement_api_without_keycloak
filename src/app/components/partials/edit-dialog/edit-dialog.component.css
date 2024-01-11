@@ -1,12 +1,11 @@
-.example-form {
+/* form {
   min-width: 150px;
   max-width: 500px;
   width: 100%;
   padding: 50px;
 }
 
-.example-full-width {
-  width: 100%;
+.formTable {
   color: var(--main-text-color);
 }
 
@@ -20,4 +19,57 @@ mat-icon {
 
 h1 {
   color: var(--main-text-color);
+} */
+
+/* Add your global styles here */
+/* Add your global styles here */
+
+form {
+  background-color: var(--main-card-bg);
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  max-width: 600px;
+}
+
+h1 {
+  color: var(--main-text-color);
+  margin-top: 20px; /* Add some top margin */
+}
+
+.formTable {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+mat-form-field {
+  display: block;
+  margin-bottom: 15px;
+  box-sizing: border-box;
+}
+
+mat-label {
+  font-weight: bold;
+}
+
+mat-icon {
+  color: var(--main-text-color);
+}
+
+mat-hint {
+  color: #777;
+  font-size: 12px;
+}
+
+button {
+  margin-top: 20px;
+}
+
+button {
+  background-color: #2196f3;
+  color: var(--main-text-color);
+}
+
+button:hover {
+  background-color: #1565c0;
 }

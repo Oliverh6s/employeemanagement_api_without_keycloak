@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 import { EmployeeService } from 'src/app/services/employee.Service';
 import { MatDialog, MatDialogRef } from '@angular/material/dialog';
+import { EmployeeListComponent } from '../employee-list/employee-list.component';
 
 @Component({
   selector: 'app-employee-dialog',
@@ -31,6 +32,7 @@ export class EmployeeDialogComponent {
 
           // Navigiere zur Detailseite des neuen Mitarbeiters
           this.router.navigate(['/employee', newEmployeeId]);
+
         }
       },
       (error) => {
