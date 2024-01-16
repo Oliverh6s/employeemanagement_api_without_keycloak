@@ -33,8 +33,6 @@ export class EmployeeListComponent implements OnInit {
   @ViewChild('searchInput') searchInput: ElementRef | undefined;
 
   constructor(
-
-    
     private fb: FormBuilder,
     private router: Router,
     private employeeService: EmployeeService,
@@ -98,7 +96,7 @@ export class EmployeeListComponent implements OnInit {
 
     dialogRef.afterClosed().subscribe((result) => {
       console.log(`Dialog result: ${result}`);
-      // Process the result if needed
+      this.loadAndSortEmployees();
     });
   }
 

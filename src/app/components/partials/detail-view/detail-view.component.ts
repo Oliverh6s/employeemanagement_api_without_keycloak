@@ -6,6 +6,7 @@ import { MatDialog } from '@angular/material/dialog';
 import { EmployeeDeleteDialogComponent } from '../employee-delete-dialog/employee-delete-dialog.component';
 import { EditDialogComponent } from '../edit-dialog/edit-dialog.component';
 
+
 @Component({
   selector: 'app-detail-view',
   templateUrl: './detail-view.component.html',
@@ -18,7 +19,8 @@ export class DetailViewComponent implements OnInit {
   constructor(
     private route: ActivatedRoute,
     private employeeService: EmployeeService,
-    private dialog: MatDialog
+    private dialog: MatDialog,
+
   ) {}
 
   ngOnInit() {
@@ -54,6 +56,6 @@ export class DetailViewComponent implements OnInit {
   openEditEmployeeDialog() {
     const dialogRef = this.dialog.open(EditDialogComponent, {
       data: { employee: this.employeeData },
-        });
+    });
   }
 }
