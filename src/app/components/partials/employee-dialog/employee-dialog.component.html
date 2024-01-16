@@ -1,99 +1,101 @@
 <form #addEmployeeForm="ngForm" (ngSubmit)="addEmployee(addEmployeeForm.value)">
-  <h1>Mitarbeiter hinzufügen</h1>
+  <h1>Mitarbeiter:in hinzufügen</h1>
 
   <div class="form-row">
-    <mat-form-field>
-      <mat-label for="lastName">Name:</mat-label>
+    <div class="form__group">
       <input
-        matInput
+        class="form__field"
         type="text"
         id="lastName"
         name="lastName"
         ngModel
         required
         maxlength="20"
+        placeholder=" "
       />
-    </mat-form-field>
+      <label for="lastName" class="form__label">Name</label>
+    </div>
 
-    <mat-form-field>
-      <mat-label for="firstName">Vorname:</mat-label>
+    <div class="form__group">
       <input
-        matInput
+        class="form__field"
         type="text"
         id="firstName"
         name="firstName"
         ngModel
         required
         maxlength="20"
+        placeholder=" "
       />
-    </mat-form-field>
+      <label for="firstName" class="form__label">Vorname</label>
+    </div>
   </div>
 
   <div class="form-row">
-    <mat-form-field class="full-width">
-      <mat-label for="phone">Telefonnummer:</mat-label>
+    <div class="form__group">
       <input
-        matInput
+        class="form__field"
         type="text"
         id="phone"
         name="phone"
         ngModel
         required
         maxlength="20"
+        placeholder=" "
       />
-    </mat-form-field>
+      <label for="phone" class="form__label">Telefonnummer:</label>
+    </div>
   </div>
 
   <div class="form-row">
-    <mat-form-field class="full-width">
-      <mat-label for="street">Straße / Hausnummer:</mat-label>
+    <div class="form__group">
       <input
-        matInput
+        class="form__field"
         type="text"
         id="street"
         name="street"
         ngModel
         required
         maxlength="50"
+        placeholder=" "
       />
-    </mat-form-field>
+      <label for="street" class="form__label">Straße / Hausnummer:</label>
+    </div>
   </div>
 
   <div class="form-row">
-    <mat-form-field>
-      <mat-label for="city">Wohnort:</mat-label>
+    <div class="form__group">
       <input
-        matInput
+        class="form__field"
         type="text"
         id="city"
         name="city"
         ngModel
         required
         maxlength="20"
+        placeholder=" "
       />
-    </mat-form-field>
+      <label for="city" class="form__label">Stadt:</label>
+    </div>
 
-    <mat-form-field>
-      <mat-label for="postcode">PLZ:</mat-label>
+    <div class="form__group">
       <input
-        matInput
+        class="form__field"
         type="text"
         id="postcode"
         name="postcode"
         ngModel
         required
-        maxlength="5"
         minlength="5"
+        maxlength="5"
+        placeholder=" "
       />
-    </mat-form-field>
+      <label for="postcode" class="form__label">PLZ:</label>
+    </div>
   </div>
+
   <div class="buttonGroup">
-    <button
-      mat-raised-button
-      type="submit"
-      color="primary"
-      [disabled]="addEmployeeForm.invalid"
-    >
+    <button mat-raised-button type="submit" color="primary" [disabled]="addEmployeeForm.invalid">
       Hinzufügen
     </button>
     <button mat-raised-button color="warn" type="button" (click)="abbrechen()">
