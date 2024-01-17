@@ -28,12 +28,15 @@
   <div class="listDiv">
     <ul class="employeeList">
       <li
-        *ngFor="let employee of filteredEmployees"
-        class="einzelnerMitarbeiter"  
-        (click)="navigateToDetail(employee.id)"
-      >
-        <span>{{ employee.lastName }} {{ employee.firstName }}</span>
-      </li>
+      *ngFor="let employee of filteredEmployees; let i = index"
+      class="einzelnerMitarbeiter"
+      [class.selected]="i === selectedEmployeeIndex"
+      (click)="selectEmployee(i)"
+      (click)="navigateToDetail(employee.id)"
+
+    >
+      <span>{{ employee.lastName }} {{ employee.firstName }}</span>
+    </li>
     </ul>
   </div>
 

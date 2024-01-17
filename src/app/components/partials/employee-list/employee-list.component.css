@@ -48,7 +48,6 @@ input {
   font-weight: bold;
 }
 
-
 .closeBtn {
   display: flex;
   align-items: center;
@@ -177,4 +176,8 @@ input:focus {
 .buttonText {
   margin: 0;
   font-size: 20px;
+}
+
+.einzelnerMitarbeiter.selected {
+  color: var(--main-green);
 }

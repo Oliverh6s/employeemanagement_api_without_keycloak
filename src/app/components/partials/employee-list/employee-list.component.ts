@@ -37,7 +37,7 @@ export class EmployeeListComponent implements OnInit {
     private router: Router,
     private employeeService: EmployeeService,
     private activatedRoute: ActivatedRoute,
-    private dialog: MatDialog
+    private dialog: MatDialog,
   ) {
     this.searchForm = this.fb.group({
       searchTerm: [''],
@@ -47,6 +47,14 @@ export class EmployeeListComponent implements OnInit {
       this.filterEmployees(searchTerm);
     });
   }
+
+  selectedEmployeeIndex: number | null = null;
+
+
+  selectEmployee(index: number) {
+    this.selectedEmployeeIndex = index;
+  }
+
 
   ngOnInit() {
     this.loadAndSortEmployees();
