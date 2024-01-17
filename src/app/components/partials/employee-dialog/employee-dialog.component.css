@@ -1,11 +1,8 @@
-/* Hier noch ändern */
-
 form {
   background-color: var(--main-card-bg);
   border-radius: 8px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  padding: 20px;
-  max-width: 600px;
+  padding: 10px;
 }
 
 .form-row {
@@ -28,23 +25,20 @@ h1 {
 
 .buttonGroup {
   display: flex;
-  justify-content: space-between; /* or space-evenly */
+  justify-content: space-between;
   margin-top: 20px;
   margin-bottom: 1rem;
   margin-left: 1rem;
   margin-right: 1rem;
 }
 
-/* Adjust margin-bottom for buttonGroup if needed */
 .buttonGroup button {
-  flex-basis: 48%; /* or adjust based on your design */
+  flex-basis: 48%;
 }
 
 .buttonGroup button:first-child {
-  margin-right: 4%; /* or adjust based on your design */
+  margin-right: 4%;
 }
-
-/* Neu */
 
 .form__group {
   position: relative;
@@ -58,7 +52,6 @@ h1 {
   border: none;
   border-bottom: 2px solid #9b9b9b;
   outline: 0;
-
   color: var(--main-text-color);
   padding: 7px 0;
   background: transparent;
@@ -104,4 +97,12 @@ h1 {
 .form__field:required,
 .form__field:invalid {
   box-shadow: none;
+}
+
+.color-button {
+  background-color: green;
+}
+
+.mat-mdc-raised-button.color-button:valid {
+  background-color: green;
 }
