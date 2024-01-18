@@ -1,38 +1,35 @@
-/* employee-dialog.component.css */
-
-/* Grundstil des Dialogs */
 .mat-dialog-container {
-  max-width: 600px; /* Maximalbreite des Dialogs */
+  max-width: 600px;
   width: 100%;
 }
 
-/* Formular innerhalb des Dialogs */
+
 form {
   background-color: var(--main-card-bg);
   border-radius: 8px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  padding: 20px; /* Erhöhe den Innenabstand des Formulars */
+  padding: 20px;
   max-width: 100%;
 }
 
-/* Überschrift */
+
 h1 {
   color: var(--main-text-color);
-  font-size: 24px; /* Erhöhe die Schriftgröße der Überschrift */
-  margin: 1.5rem; /* Erhöhe den oberen und unteren Abstand der Überschrift */
+  font-size: 24px;
+  margin: 1.5rem;
 }
 
-/* Formularreihen und Abstände */
+
 .form-row {
   display: flex;
-  gap: 1.5rem; /* Erhöhe den Abstand zwischen den Formularreihen */
+  gap: 1.5rem;
   margin-left: 1rem;
   margin-right: 1rem;
-  margin-top: 1.5rem; /* Erhöhe den oberen Abstand */
+  margin-top: 1.5rem;
   justify-content: space-evenly;
 }
 
-/* Formularfelder */
+
 .form__group {
   position: relative;
   padding: 20px 0 0;
@@ -40,14 +37,14 @@ h1 {
 }
 
 .form__field {
-  font-size: 18px; /* Erhöhe die Schriftgröße der Formularfelder */
+  font-size: 18px;
   font-family: inherit;
   width: 100%;
   border: none;
   border-bottom: 2px solid #9b9b9b;
   outline: 0;
   color: var(--main-text-color);
-  padding: 10px 0; /* Erhöhe den oberen und unteren Abstand der Formularfelder */
+  padding: 10px 0;
   background: transparent;
   transition: border-color 0.2s;
 }
@@ -90,12 +87,12 @@ h1 {
   box-shadow: none;
 }
 
-/* Button-Gruppe */
+
 .buttonGroup {
   display: flex;
   justify-content: space-between;
-  margin-top: 40px; /* Erhöhe den oberen Abstand der Button-Gruppe */
-  margin-bottom: 1.5rem; /* Erhöhe den unteren Abstand der Button-Gruppe */
+  margin-top: 40px;
+  margin-bottom: 1.5rem;
   margin-left: 1rem;
   margin-right: 1rem;
 }
@@ -108,7 +105,7 @@ h1 {
   margin-right: 4%;
 }
 
-/* Nicht geänderte Teile */
+
 .full-width {
   flex: 1;
 }
