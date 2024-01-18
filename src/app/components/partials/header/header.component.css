@@ -52,7 +52,7 @@ header {
   font-family: "Arial", sans-serif;
   font-weight: bold;
   text-transform: uppercase;
-  color: var(--main-text-color);
+  color: var(--font-color-primary);
   letter-spacing: 2px;
   /*text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);*/
 }
