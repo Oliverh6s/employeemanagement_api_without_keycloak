@@ -6,30 +6,35 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./header.component.css'],
 })
 export class HeaderComponent implements OnInit {
-  color: any;
+  isDarkMode: boolean = true;
 
   ngOnInit() {
-    // Beim Initialisieren die gespeicherte Farbe abrufen
-    const savedColor = localStorage.getItem('selectedColor');
-    if (savedColor) {
-      this.color = savedColor;
-    }
+    // Beim Initialisieren die gespeicherten Einstellungen abrufen
+    const savedMode = localStorage.getItem('darkMode');
+
+    // Wenn der Dark-Modus gespeichert wurde, setze den Status entsprechend
+    this.isDarkMode = savedMode === 'true';
+    this.applyDarkMode();
   }
 
   changeColor() {
-    // Verwenden Sie Angular-Methoden zum Arbeiten mit dem DOM
+    this.isDarkMode = !this.isDarkMode; // Toggle the dark mode
+    this.applyDarkMode();
+    this.saveSettings();
+  }
+
+  private applyDarkMode() {
+    // Ändern Sie die Klasse des body-Elements basierend auf dem Dark-Modus-Zustand
     const body = document.body;
-
-    // Überprüfen Sie den Zustand des Schalters
-    const checkBox = document.getElementById('myCheck') as HTMLInputElement;
-
-    // Ändern Sie die Klasse des body-Elements basierend auf dem Schalterzustand
-    if (checkBox.checked) {
-      body.classList.remove('Light');
-    } else {
+    if (this.isDarkMode) {
       body.classList.add('Light');
+    } else {
+      body.classList.remove('Light');
     }
   }
 
-  // localStorage.setItem('selectedColor', this.color);
+  private saveSettings() {
+    // Speichern Sie den Dark-Modus-Zustand in der localStorage
+    localStorage.setItem('darkMode', this.isDarkMode.toString());
+  }
 }

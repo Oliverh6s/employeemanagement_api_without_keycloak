@@ -13,7 +13,7 @@
     </div>
     <div class="button-wrapper">
       <label class="ui-switch">
-        <input type="checkbox" id="myCheck" (click)="changeColor()" checked />
+        <input type="checkbox" id="myCheck" (change)="changeColor()" [checked]="!isDarkMode" />
         <div class="slider">
           <div class="circle"></div>
         </div>
