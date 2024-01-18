@@ -13,7 +13,6 @@ export class HeaderComponent implements OnInit {
     const savedColor = localStorage.getItem('selectedColor');
     if (savedColor) {
       this.color = savedColor;
-      this.applyColor();
     }
   }
 
@@ -30,19 +29,7 @@ export class HeaderComponent implements OnInit {
     } else {
       body.classList.add('Light');
     }
-
-    this.applyColor();
   }
 
-  colorChangePicker() {
-    this.applyColor();
-
-    document.body.style.setProperty('--main-green', this.color);
-
-    localStorage.setItem('selectedColor', this.color);
-  }
-  private applyColor() {
-    // Ändern Sie die Variable --main-green basierend auf der ausgewählten Farbe
-    document.body.style.setProperty('--main-green', this.color);
-  }
+  // localStorage.setItem('selectedColor', this.color);
 }
