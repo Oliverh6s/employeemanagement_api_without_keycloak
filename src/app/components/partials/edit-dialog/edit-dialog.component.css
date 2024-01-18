@@ -73,7 +73,6 @@ h1 {
 }
 
 .form__field:focus {
-  border-width: 3px;
   border-color: var(--main-green);
   border-image-slice: 1;
 }
