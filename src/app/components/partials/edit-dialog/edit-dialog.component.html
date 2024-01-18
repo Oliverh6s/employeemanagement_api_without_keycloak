@@ -1,112 +1,116 @@
 <form #employeeForm="ngForm" (ngSubmit)="updateEmployee()">
   <h1>Mitarbeiter:in bearbeiten</h1>
 
-  <table class="formTable" cellspacing="0">
-    <tr>
-      <td>
-        <mat-form-field class="example-full-width">
-          <mat-label for="firstName">Vorname:</mat-label>
-          <input
-            matInput
-            id="firstName"
-            name="firstName"
-            [(ngModel)]="tempFirstName"
-            ngModel
-            required
-            maxlength="25"
-          />
-          <mat-icon matSuffix>person</mat-icon>
-        </mat-form-field>
-      </td>
-      <td>
-        <mat-form-field class="example-full-width">
-          <mat-label>Nachname</mat-label>
-          <input
-            matInput
-            id="lastName"
-            name="lastName"
-            [(ngModel)]="tempLastName"
-            ngModel
-            required
-            maxlength="25"
-          />
-          <mat-icon matSuffix>person</mat-icon>
-        </mat-form-field>
-      </td>
-    </tr>
-  </table>
-
-  <p>
-    <mat-form-field class="example-full-width">
-      <mat-label>Telefonnummer</mat-label>
+  <div class="form-row">
+    <div class="form__group">
       <input
-        matInput
-        id="phone"
-        name="phone"
-        [(ngModel)]="tempPhone"
+        class="form__field"
+        type="text"
+        id="lastName"
+        name="lastName"
+        [(ngModel)]="tempLastName"
         ngModel
         required
         maxlength="25"
+        placeholder=" "
       />
-      <mat-icon matSuffix>call</mat-icon>
-    </mat-form-field>
+      <label for="lastName" class="form__label">Name</label>
+    </div>
 
-    <mat-form-field class="example-full-width">
-      <mat-label>Straße / Hausnummer</mat-label>
+    <div class="form__group">
       <input
-        matInput
+        class="form__field"
+        type="text"
+        id="firstName"
+        name="firstName"
+        ngModel
+        [(ngModel)]="tempFirstName"
+        required
+        maxlength="20"
+        placeholder=" "
+      />
+      <label for="firstName" class="form__label">Vorname</label>
+    </div>
+  </div>
+
+  <div class="form-row">
+    <div class="form__group">
+      <input
+        class="form__field"
+        type="text"
+        id="phone"
+        name="phone"
+        ngModel
+        [(ngModel)]="tempPhone"
+        required
+        maxlength="20"
+        placeholder=" "
+      />
+      <label for="phone" class="form__label">Telefonnummer:</label>
+    </div>
+  </div>
+
+  <div class="form-row">
+    <div class="form__group">
+      <input
+        class="form__field"
+        type="text"
         id="street"
         name="street"
-        [(ngModel)]="tempStreet"
         ngModel
+        [(ngModel)]="tempStreet"
         required
         maxlength="50"
+        placeholder=" "
       />
-      <mat-icon matSuffix>location_on</mat-icon>
-    </mat-form-field>
-  </p>
+      <label for="street" class="form__label">Straße / Hausnummer:</label>
+    </div>
+  </div>
 
-  <table class="example-full-width" cellspacing="0">
-    <tr>
-      <td>
-        <mat-form-field class="example-full-width">
-          <mat-label>Stadt</mat-label>
-          <input
-            matInput
-            id="city"
-            name="city"
-            [(ngModel)]="tempCity"
-            ngModel
-            required
-            maxlength="25"
-          />
-          <mat-icon matSuffix>location_city</mat-icon>
-        </mat-form-field>
-      </td>
-      <td>
-        <mat-form-field class="example-full-width">
-          <mat-label>PLZ</mat-label>
-          <input
-            matInput
-            #postalCode
-            maxlength="5"
-            id="postcode"
-            name="postcode"
-            [(ngModel)]="tempPostcode"
-            ngModel
-            required
-            minlength="5"
-            maxlength="5"
-          />
-          <mat-icon matSuffix>local_post_office</mat-icon>
-          <mat-hint align="start">{{ postalCode.value.length }} / 5</mat-hint>
-        </mat-form-field>
-      </td>
-    </tr>
-  
+  <div class="form-row">
+    <div class="form__group">
+      <input
+        class="form__field"
+        type="text"
+        id="city"
+        name="city"
+        ngModel
+        [(ngModel)]="tempCity"
+        required
+        maxlength="20"
+        placeholder=" "
+      />
+      <label for="city" class="form__label">Stadt:</label>
+    </div>
 
-  <button mat-raised-button type="submit" color="primary"  (click)="updateEmployee()" [disabled]="!employeeForm.valid">
-    Mitarbeiter:in aktualisieren
-  </button>
-</table>
+    <div class="form__group">
+      <input
+        class="form__field"
+        type="text"
+        id="postcode"
+        name="postcode"
+        ngModel
+        [(ngModel)]="tempPostcode"
+        required
+        minlength="5"
+        maxlength="5"
+        placeholder=" "
+      />
+      <label for="postcode" class="form__label">PLZ:</label>
+    </div>
+  </div>
+
+  <div class="buttonGroup">
+    <button
+      mat-raised-button
+      type="submit"
+      class="color-button"
+      [disabled]="!employeeForm.valid"
+    >
+      Aktualisieren
+    </button>
+    <button mat-raised-button color="warn" type="button" (click)="abbrechen()">
+      Abbrechen
+    </button>
+  </div>
 </form>

@@ -1,75 +1,103 @@
-/* form {
-  min-width: 150px;
-  max-width: 500px;
-  width: 100%;
-  padding: 50px;
-}
-
-.formTable {
-  color: var(--main-text-color);
-}
-
-td {
-  padding-right: 8px;
-}
-
-mat-icon {
-  color: var(--main-text-color);
-}
-
-h1 {
-  color: var(--main-text-color);
-} */
-
-/* Add your global styles here */
-/* Add your global styles here */
-
 form {
   background-color: var(--main-card-bg);
   border-radius: 8px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  padding: 20px;
-  max-width: 600px;
+  padding: 10px;
+}
+
+.form-row {
+  display: flex;
+  gap: 1rem;
+  margin-left: 1rem;
+  margin-right: 1rem;
+  margin-top: 1rem;
+  justify-content: space-evenly;
 }
 
 h1 {
   color: var(--main-text-color);
-  margin-top: 20px; /* Add some top margin */
+  margin: 1rem;
 }
 
-.formTable {
-  width: 100%;
-  border-collapse: collapse;
+.full-width {
+  flex: 1;
 }
 
-mat-form-field {
-  display: block;
-  margin-bottom: 15px;
-  box-sizing: border-box;
-}
-
-mat-label {
-  font-weight: bold;
-}
-
-mat-icon {
-  color: var(--main-text-color);
-}
-
-mat-hint {
-  color: #777;
-  font-size: 12px;
-}
-
-button {
+.buttonGroup {
+  display: flex;
+  justify-content: space-between;
   margin-top: 20px;
+  margin-bottom: 1rem;
+  margin-left: 1rem;
+  margin-right: 1rem;
 }
 
-button {
-  background-color: #2196f3;
+.buttonGroup button {
+  flex-basis: 48%;
+}
+
+.buttonGroup button:first-child {
+  margin-right: 4%;
+}
+
+.form__group {
+  position: relative;
+  padding: 20px 0 0;
+  width: 100%;
+}
+
+.form__field {
+  font-family: inherit;
+  width: 100%;
+  border: none;
+  border-bottom: 2px solid #9b9b9b;
+  outline: 0;
   color: var(--main-text-color);
+  padding: 7px 0;
+  background: transparent;
+  transition: border-color 0.2s;
 }
 
-button:hover {
-  background-color: #1565c0;
+.form__field::placeholder {
+  color: transparent;
+}
+
+.form__field:placeholder-shown ~ .form__label {
+  font-size: 17px;
+  cursor: text;
+  top: 20px;
+}
+
+.form__label {
+  position: absolute;
+  top: 0;
+  display: block;
+  transition: 0.2s;
+  font-size: 17px;
+  color: #9b9b9b;
+  pointer-events: none;
+}
+
+.form__field:focus {
+  padding-bottom: 6px;
+  border-width: 3px;
+  border-color: var(--main-green);
+  border-image-slice: 1;
+}
+
+.form__field:focus ~ .form__label {
+  position: absolute;
+  top: 0;
+  display: block;
+  transition: 0.2s;
+  color: #9b9b9b;
+}
+
+.form__field:required,
+.form__field:invalid {
+  box-shadow: none;
+}
+
+.mat-mdc-raised-button.color-button:valid {
+  background-color: green;
 }

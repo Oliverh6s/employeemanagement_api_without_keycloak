@@ -93,14 +93,9 @@ h1 {
   color: #9b9b9b;
 }
 
-/* reset input */
 .form__field:required,
 .form__field:invalid {
   box-shadow: none;
-}
-
-.color-button {
-  background-color: green;
 }
 
 .mat-mdc-raised-button.color-button:valid {
