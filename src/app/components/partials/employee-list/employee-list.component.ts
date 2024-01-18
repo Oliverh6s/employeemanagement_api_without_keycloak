@@ -43,8 +43,8 @@ export class EmployeeListComponent implements OnInit {
     });
   }
 
-  handleEmployeeClick(index: number, employeeId: number) {
-    this.selectEmployee(index)
+  handleEmployeeClick(employeeId: number) {
+    this.selectEmployee(employeeId)
     this.navigateToDetail(employeeId)
   }
 

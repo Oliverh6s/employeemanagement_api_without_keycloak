@@ -28,9 +28,9 @@
   <div class="listDiv">
     <ul class="employeeList">
       <li
-        (click)="handleEmployeeClick(i, employee.id)"
+        (click)="handleEmployeeClick(employee.id)"
         *ngFor="let employee of filteredEmployees; let i = index"
-        [class.selected]="i === selectedEmployeeIndex"
+        [class.selected]="employee.id === selectedEmployeeIndex"
         class="einzelnerMitarbeiter"
       >
         <span>{{ employee.lastName }} {{ employee.firstName }}</span>
