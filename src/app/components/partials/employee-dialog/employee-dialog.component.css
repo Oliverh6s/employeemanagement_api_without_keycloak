@@ -1,45 +1,38 @@
+/* employee-dialog.component.css */
+
+/* Grundstil des Dialogs */
+.mat-dialog-container {
+  max-width: 600px; /* Maximalbreite des Dialogs */
+  width: 100%;
+}
+
+/* Formular innerhalb des Dialogs */
 form {
   background-color: var(--main-card-bg);
   border-radius: 8px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  padding: 10px;
+  padding: 20px; /* Erhöhe den Innenabstand des Formulars */
+  max-width: 100%;
 }
 
+/* Überschrift */
+h1 {
+  color: var(--main-text-color);
+  font-size: 24px; /* Erhöhe die Schriftgröße der Überschrift */
+  margin: 1.5rem; /* Erhöhe den oberen und unteren Abstand der Überschrift */
+}
+
+/* Formularreihen und Abstände */
 .form-row {
   display: flex;
-  gap: 1rem;
+  gap: 1.5rem; /* Erhöhe den Abstand zwischen den Formularreihen */
   margin-left: 1rem;
   margin-right: 1rem;
-  margin-top: 1rem;
+  margin-top: 1.5rem; /* Erhöhe den oberen Abstand */
   justify-content: space-evenly;
 }
 
-h1 {
-  color: var(--main-text-color);
-  margin: 1rem;
-}
-
-.full-width {
-  flex: 1;
-}
-
-.buttonGroup {
-  display: flex;
-  justify-content: space-between;
-  margin-top: 20px;
-  margin-bottom: 1rem;
-  margin-left: 1rem;
-  margin-right: 1rem;
-}
-
-.buttonGroup button {
-  flex-basis: 48%;
-}
-
-.buttonGroup button:first-child {
-  margin-right: 4%;
-}
-
+/* Formularfelder */
 .form__group {
   position: relative;
   padding: 20px 0 0;
@@ -47,13 +40,14 @@ h1 {
 }
 
 .form__field {
+  font-size: 18px; /* Erhöhe die Schriftgröße der Formularfelder */
   font-family: inherit;
   width: 100%;
   border: none;
   border-bottom: 2px solid #9b9b9b;
   outline: 0;
   color: var(--main-text-color);
-  padding: 7px 0;
+  padding: 10px 0; /* Erhöhe den oberen und unteren Abstand der Formularfelder */
   background: transparent;
   transition: border-color 0.2s;
 }
@@ -96,6 +90,37 @@ h1 {
 .form__field:required,
 .form__field:invalid {
   box-shadow: none;
+}
+
+/* Button-Gruppe */
+.buttonGroup {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 40px; /* Erhöhe den oberen Abstand der Button-Gruppe */
+  margin-bottom: 1.5rem; /* Erhöhe den unteren Abstand der Button-Gruppe */
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+
+.buttonGroup button {
+  flex-basis: 48%;
+}
+
+.buttonGroup button:first-child {
+  margin-right: 4%;
+}
+
+/* Nicht geänderte Teile */
+.full-width {
+  flex: 1;
+}
+
+.buttonGroup button {
+  flex-basis: 48%;
+}
+
+.buttonGroup button:first-child {
+  margin-right: 4%;
 }
 
 .mat-mdc-raised-button.color-button:valid {
