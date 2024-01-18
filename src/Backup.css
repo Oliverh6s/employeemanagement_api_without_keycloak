@@ -6,6 +6,7 @@
 * {
   box-sizing: border-box;
 }
+
 html {
   font-size: 16px;
   background: #202124;
@@ -15,6 +16,7 @@ html,
 button {
   font-family: "Quicksand", "sans-serif";
 }
+
 body {
   margin: 0;
 }
@@ -54,6 +56,7 @@ html,
 body {
   height: 100%;
 }
+
 body {
   margin: 0;
   font-family: Roboto, "Helvetica Neue", sans-serif;
@@ -71,7 +74,7 @@ body {
   --main-text-color: white;
   --main-card-bg: #2c3138;
   --main-button-bg: #383a3f;
-  --main-button-red: red;
+  --main-button-red: #ff0000;
   --main-Head-list-bg: #202124;
   --hover-button-blue: #1e5f74;
   --main-submit-green: #4caf50;
@@ -87,7 +90,7 @@ body.Light {
   --main-text-color: black;
   --main-card-bg: #f5f5f5;
   --main-button-bg: #383a3f;
-  --main-button-red: red;
+  --main-button-red: #ff0000;
   --main-Head-list-bg: white;
   --hover-button-blue: #1e5f74;
   --main-submit-green: #4caf50;
@@ -100,6 +103,7 @@ html,
 body {
   height: 100%;
 }
+
 body {
   margin: 0;
   font-family: Roboto, "Helvetica Neue", sans-serif;

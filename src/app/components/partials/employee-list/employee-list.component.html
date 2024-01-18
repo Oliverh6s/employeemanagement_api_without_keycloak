@@ -2,21 +2,21 @@
   <div class="searchDiv">
     <div class="input-container">
 
-      <app-toggle-sort-button  (click)="toggleSort()"></app-toggle-sort-button>
+      <app-toggle-sort-button (click)="toggleSort()"></app-toggle-sort-button>
       <div class="searchInput__Container">
         <form [formGroup]="searchForm">
           <mat-icon class="searchInput__SearchIcon">search</mat-icon>
           <input
-            style="padding-left: 40px;"
+            #searchInput
             formControlName="searchTerm"
             placeholder="Suche nach Mitarbeitern"
-            #searchInput
+            style="padding-left: 40px;"
           />
           <button
-            class="closeBtn"
-            *ngIf="searchForm.get('searchTerm')?.value !== ''"
             (click)="clearSearch()"
+            *ngIf="searchForm.get('searchTerm')?.value !== ''"
             [@fade]
+            class="closeBtn"
           >
             <mat-icon>close</mat-icon>
           </button>
@@ -28,22 +28,21 @@
   <div class="listDiv">
     <ul class="employeeList">
       <li
-      *ngFor="let employee of filteredEmployees; let i = index"
-      class="einzelnerMitarbeiter"
-      [class.selected]="i === selectedEmployeeIndex"
-      (click)="selectEmployee(i)"
-      (click)="navigateToDetail(employee.id)"
+        (click)="selectEmployee(i)"
+        (click)="navigateToDetail(employee.id)"
+        *ngFor="let employee of filteredEmployees; let i = index"
+        [class.selected]="i === selectedEmployeeIndex"
+        class="einzelnerMitarbeiter"
 
-    >
-      <span>{{ employee.lastName }} {{ employee.firstName }}</span>
-    </li>
+      >
+        <span>{{ employee.lastName }} {{ employee.firstName }}</span>
+      </li>
     </ul>
   </div>
 
   <div class="addDiv">
-    <button class="btnAdd" (click)="openAddEmployeeDialog()">
+    <button (click)="openAddEmployeeDialog()" class="btnAdd">
       <div class="buttonContent__Wrapper">
-        <mat-icon class="buttonIcon">add</mat-icon>
         <p class="buttonText">Mitarbeiter:in hinzufügen</p>
       </div>
     </button>
