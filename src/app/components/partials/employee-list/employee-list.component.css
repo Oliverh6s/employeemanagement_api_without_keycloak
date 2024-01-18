@@ -119,6 +119,7 @@ input:focus {
   margin-bottom: 10px;
   border-radius: 8px;
   cursor: pointer;
+  font-size: 20px;
   /* border: 1px solid black; Border für light */
 }
 
@@ -140,7 +141,7 @@ input:focus {
   background-color: var(--main-green);
   border-radius: 8px;
   border: none;
-  color: var(--main-text-color);
+  color: #fff;
   cursor: pointer;
   display: inline-flex;
   font-family: "Helvetica Neue", Arial, sans-serif;
@@ -157,13 +158,12 @@ input:focus {
 }
 
 .btnAdd:hover {
-  /* transform: translateY(-1px); */
+  background-color: #4c8f87 !important;
 }
 
 .btnAdd:active {
   background-color: #1e5f74;
   box-shadow: rgba(0, 0, 0, 0.06) 0 2px 4px;
-  /* transform: translateY(0); */
 }
 
 .buttonContent__Wrapper {
@@ -180,4 +180,5 @@ input:focus {
 
 .einzelnerMitarbeiter.selected {
   color: var(--main-green);
+  background: rgba(69, 117, 111, 0.3);
 }

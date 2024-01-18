@@ -1,17 +1,11 @@
-import { Component, ElementRef, ViewChild, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup } from '@angular/forms';
-import { EmployeeService } from 'src/app/services/employee.Service';
-import { Employees } from 'src/app/shared/models/employees';
-import { ActivatedRoute, Router } from '@angular/router';
-import {
-  trigger,
-  state,
-  style,
-  animate,
-  transition,
-} from '@angular/animations';
-import { MatDialog } from '@angular/material/dialog';
-import { EmployeeDialogComponent } from '../employee-dialog/employee-dialog.component';
+import {Component, ElementRef, OnInit, ViewChild} from '@angular/core';
+import {FormBuilder, FormGroup} from '@angular/forms';
+import {EmployeeService} from 'src/app/services/employee.Service';
+import {Employees} from 'src/app/shared/models/employees';
+import {ActivatedRoute, Router} from '@angular/router';
+import {animate, state, style, transition, trigger,} from '@angular/animations';
+import {MatDialog} from '@angular/material/dialog';
+import {EmployeeDialogComponent} from '../employee-dialog/employee-dialog.component';
 
 @Component({
   selector: 'app-employee-list',
@@ -19,7 +13,7 @@ import { EmployeeDialogComponent } from '../employee-dialog/employee-dialog.comp
   styleUrls: ['./employee-list.component.css'],
   animations: [
     trigger('fade', [
-      state('void', style({ opacity: 0 })),
+      state('void', style({opacity: 0})),
       transition(':enter, :leave', [animate('120ms ease-in-out')]),
     ]),
   ],
@@ -31,6 +25,7 @@ export class EmployeeListComponent implements OnInit {
   isAscendingSort = true;
 
   @ViewChild('searchInput') searchInput: ElementRef | undefined;
+  selectedEmployeeIndex: number | null = null;
 
   constructor(
     private fb: FormBuilder,
@@ -48,7 +43,10 @@ export class EmployeeListComponent implements OnInit {
     });
   }
 
-  selectedEmployeeIndex: number | null = null;
+  handleEmployeeClick(index: number, employeeId: number) {
+    this.selectEmployee(index)
+    this.navigateToDetail(employeeId)
+  }
 
   selectEmployee(index: number) {
     this.selectedEmployeeIndex = index;

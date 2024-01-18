@@ -50,7 +50,8 @@ a {
 }
 
 ::selection {
-  background: var(--main-green);
+  /*background: var(--main-green);*/
+  background-color: rgba(69, 117, 111, 0.35);
 }
 
 html,
