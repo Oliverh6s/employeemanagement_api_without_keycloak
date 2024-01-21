@@ -36,7 +36,7 @@ header {
 }
 
 .logo__name::selection {
-  color: var(--main-text-color); 
+  color: var(--main-text-color);
 }
 
 .header__title__wrapper {
@@ -60,10 +60,7 @@ header {
   margin-left: auto;
 }
 
-
-
 .ui-switch {
-
   --switch-bg: rgb(135, 150, 165);
   --switch-width: 48px;
   --switch-height: 20px;
@@ -101,12 +98,12 @@ header {
   background-repeat: no-repeat;
   background-position: center center;
   -webkit-transition: left 150ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,
-  -webkit-transform 150ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+    -webkit-transform 150ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
   -o-transition: left 150ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,
-  transform 150ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+    transform 150ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
   transition: left 150ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,
-  transform 150ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,
-  -webkit-transform 150ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+    transform 150ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,
+    -webkit-transform 150ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -117,7 +114,7 @@ header {
   -ms-flex-pack: center;
   justify-content: center;
   box-shadow: 0px 2px 1px -1px rgba(0, 0, 0, 0.2),
-  0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0, 0, 0, 0.12);
+    0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0, 0, 0, 0.12);
 }
 
 .slider .circle::before {
@@ -132,8 +129,6 @@ header {
   transition: all 500ms;
   opacity: 0;
 }
-
-
 
 .ui-switch input:checked + .slider .circle {
   left: calc(100% - var(--circle-diameter));

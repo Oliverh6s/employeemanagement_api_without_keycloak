@@ -1,11 +1,17 @@
-import {Component, ElementRef, OnInit, ViewChild} from '@angular/core';
-import {FormBuilder, FormGroup} from '@angular/forms';
-import {EmployeeService} from 'src/app/services/employee.Service';
-import {Employees} from 'src/app/shared/models/employees';
-import {ActivatedRoute, Router} from '@angular/router';
-import {animate, state, style, transition, trigger,} from '@angular/animations';
-import {MatDialog} from '@angular/material/dialog';
-import {EmployeeDialogComponent} from '../employee-dialog/employee-dialog.component';
+import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
+import { FormBuilder, FormGroup } from '@angular/forms';
+import { EmployeeService } from 'src/app/services/employee.Service';
+import { Employees } from 'src/app/shared/models/employees';
+import { ActivatedRoute, Router } from '@angular/router';
+import {
+  animate,
+  state,
+  style,
+  transition,
+  trigger,
+} from '@angular/animations';
+import { MatDialog } from '@angular/material/dialog';
+import { EmployeeDialogComponent } from '../employee-dialog/employee-dialog.component';
 
 @Component({
   selector: 'app-employee-list',
@@ -13,7 +19,7 @@ import {EmployeeDialogComponent} from '../employee-dialog/employee-dialog.compon
   styleUrls: ['./employee-list.component.css'],
   animations: [
     trigger('fade', [
-      state('void', style({opacity: 0})),
+      state('void', style({ opacity: 0 })),
       transition(':enter, :leave', [animate('120ms ease-in-out')]),
     ]),
   ],
@@ -38,14 +44,18 @@ export class EmployeeListComponent implements OnInit {
       searchTerm: [''],
     });
 
+    this.employeeService.action$.subscribe(() => {
+      this.handleAction();
+    });
+
     this.searchForm.get('searchTerm')?.valueChanges.subscribe((searchTerm) => {
       this.filterEmployees(searchTerm);
     });
   }
 
   handleEmployeeClick(employeeId: number) {
-    this.selectEmployee(employeeId)
-    this.navigateToDetail(employeeId)
+    this.selectEmployee(employeeId);
+    this.navigateToDetail(employeeId);
   }
 
   selectEmployee(index: number) {
@@ -94,13 +104,12 @@ export class EmployeeListComponent implements OnInit {
   }
 
   openAddEmployeeDialog() {
-    const dialogRef = this.dialog.open(EmployeeDialogComponent, {
-      // You can add dialog configuration options here
-    });
+    const dialogRef = this.dialog.open(EmployeeDialogComponent, {});
 
     dialogRef.afterClosed().subscribe((result) => {
       console.log(`Dialog result: ${result}`);
       this.loadAndSortEmployees();
+      this.selectEmployee(result);
     });
   }
 
@@ -111,5 +120,9 @@ export class EmployeeListComponent implements OnInit {
     if (this.searchInput) {
       this.searchInput.nativeElement.focus();
     }
+  }
+
+  handleAction(): void {
+    this.loadAndSortEmployees();
   }
 }
