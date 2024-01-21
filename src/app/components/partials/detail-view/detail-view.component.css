@@ -9,12 +9,11 @@
 
 .detailContent {
   height: 100%;
-  background-color: var(--main-bg-color); /* Hinzugefügt: Farbverlauf setzen */
-  color: var(--main-text-color); /* Hinzugefügt: Textfarbe auf Weiß setzen */
+  background-color: var(--main-bg-color);
+  color: var(--main-text-color); 
 }
 
 .tile:hover {
-  /* { Dass muss noch angepasst werden  */
   box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.15);
 }
 
@@ -22,8 +21,8 @@
   grid-area: buttons;
   display: flex;
   justify-content: flex-end;
-  align-items: flex-end; /* Buttons unten ausrichten */
-  margin-top: auto; /* Platz oberhalb der Buttons ausnutzen */
+  align-items: flex-end; 
+  margin-top: auto;
 }
 
 .editButton,
@@ -41,13 +40,13 @@
 .editButton:hover,
 .deleteButton:hover {
   background-color: var(--hover-button-blue);
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Schatten nur für die Buttons */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); 
 }
 
 .noEmployeeBackground {
   padding: 40px;
-  height: calc(100vh - 60px); /* Hinzugefügt: Container auf 100% Höhe setzen */
-  color: var(--main-text-color); /* Hinzugefügt: Textfarbe auf Weiß setzen */
+  height: calc(100vh - 60px); 
+  color: var(--main-text-color); 
 }
 
 .noEmployeeDiv {

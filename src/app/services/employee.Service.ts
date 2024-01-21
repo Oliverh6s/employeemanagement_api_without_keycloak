@@ -20,7 +20,7 @@ export class EmployeeService {
     return this.http.get<Employees>(`${this.apiUrl}/${employeeId}`).pipe(
       catchError((error: any) => {
         console.error('Error in getEmployeeById:', error);
-        throw error; 
+        throw error;
       })
     );
   }

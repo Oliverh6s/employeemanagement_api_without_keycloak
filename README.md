@@ -4,8 +4,8 @@ Erstelle einen Fork dieses Projektes auf Github.
 
 ## Requirements
 
-* Docker https://docs.docker.com/get-docker/
-* Docker compose (bei Windows und Mac schon in Docker enthalten) https://docs.docker.com/compose/install/
+- Docker https://docs.docker.com/get-docker/
+- Docker compose (bei Windows und Mac schon in Docker enthalten) https://docs.docker.com/compose/install/
 
 ### Terminal öffnen
 
@@ -45,7 +45,7 @@ http://localhost:8089/swagger
 
 # Postgres
 
-```
+````
 
 ### Intellij-Ansicht für Postgres Datenbank einrichten (geht nicht in Webstorm!)
 
@@ -58,10 +58,9 @@ http://localhost:8089/swagger
 6. URL der DB einfügen (jdbc:postgresql://postgres-employee:5432/employee_db) und PostgreSQL-Treiber auswählen, mit OK bestätigen
 7. Username lf10_starter und Passwort secret eintragen (siehe application.properties), mit Apply bestätigen
 8. im Reiter Schemas alle Häkchen entfernen und lediglich vor lf10_starter_db und public Häkchen setzen
-9. mit Apply und ok bestätigen 
-```
+9. mit Apply und ok bestätigen
+````
 
 # Bugs
 
-Trage hier die Features ein, die nicht funktionieren. Beschreibe den jeweiligen Fehler. 
-
+Trage hier die Features ein, die nicht funktionieren. Beschreibe den jeweiligen Fehler.

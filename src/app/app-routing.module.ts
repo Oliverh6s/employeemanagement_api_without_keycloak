@@ -5,7 +5,6 @@ import { DetailViewComponent } from './components/partials/detail-view/detail-vi
 
 const routes: Routes = [
   { path: '', component: DetailViewComponent },
-  // { path: 'search/:searchTerm', component: AppComponent },
   { path: 'employee/:id', component: DetailViewComponent },
 ];
 

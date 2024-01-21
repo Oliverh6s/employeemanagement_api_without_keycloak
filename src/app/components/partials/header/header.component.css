@@ -36,7 +36,7 @@ header {
 }
 
 .logo__name::selection {
-  color: var(--main-text-color); /*Sonst invertiert er die markierung*/
+  color: var(--main-text-color); 
 }
 
 .header__title__wrapper {
@@ -54,21 +54,20 @@ header {
   text-transform: uppercase;
   color: var(--font-color-primary);
   letter-spacing: 2px;
-  /*text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);*/
 }
 
 .button-wrapper {
-  margin-left: auto; /* Verschiebt das Button-Wrapper nach rechts */
+  margin-left: auto;
 }
 
-/* switch settings 👇 */
+
 
 .ui-switch {
-  /* switch */
+
   --switch-bg: rgb(135, 150, 165);
   --switch-width: 48px;
   --switch-height: 20px;
-  /* circle */
+
   --circle-diameter: 32px;
   --circle-bg: var(--toggle-Dark-Light);
   --circle-inset: calc((var(--circle-diameter) - var(--switch-height)) / 2);
@@ -134,7 +133,7 @@ header {
   opacity: 0;
 }
 
-/* actions */
+
 
 .ui-switch input:checked + .slider .circle {
   left: calc(100% - var(--circle-diameter));

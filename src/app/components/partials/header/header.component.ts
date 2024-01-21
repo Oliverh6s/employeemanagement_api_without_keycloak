@@ -9,22 +9,19 @@ export class HeaderComponent implements OnInit {
   isDarkMode: boolean = true;
 
   ngOnInit() {
-    // Beim Initialisieren die gespeicherten Einstellungen abrufen
     const savedMode = localStorage.getItem('darkMode');
 
-    // Wenn der Dark-Modus gespeichert wurde, setze den Status entsprechend
     this.isDarkMode = savedMode === 'true';
     this.applyDarkMode();
   }
 
   changeColor() {
-    this.isDarkMode = !this.isDarkMode; // Toggle the dark mode
+    this.isDarkMode = !this.isDarkMode;
     this.applyDarkMode();
     this.saveSettings();
   }
 
   private applyDarkMode() {
-    // Ändern Sie die Klasse des body-Elements basierend auf dem Dark-Modus-Zustand
     const body = document.body;
     if (this.isDarkMode) {
       body.classList.add('Light');
@@ -34,7 +31,6 @@ export class HeaderComponent implements OnInit {
   }
 
   private saveSettings() {
-    // Speichern Sie den Dark-Modus-Zustand in der localStorage
     localStorage.setItem('darkMode', this.isDarkMode.toString());
   }
 }

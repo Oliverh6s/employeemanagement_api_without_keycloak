@@ -1,7 +1,6 @@
 <div class="flex-container">
   <div class="searchDiv">
     <div class="input-container">
-
       <app-toggle-sort-button (click)="toggleSort()"></app-toggle-sort-button>
       <div class="searchInput__Container">
         <form [formGroup]="searchForm">
@@ -10,7 +9,7 @@
             #searchInput
             formControlName="searchTerm"
             placeholder="Suche nach Mitarbeitern"
-            style="padding-left: 40px;"
+            style="padding-left: 40px"
           />
           <button
             (click)="clearSearch()"
@@ -46,4 +45,3 @@
     </button>
   </div>
 </div>
-

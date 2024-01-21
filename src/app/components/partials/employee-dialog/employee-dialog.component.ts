@@ -23,14 +23,11 @@ export class EmployeeDialogComponent {
       (result: any) => {
         console.warn(result);
 
-        // Überprüfe, ob die ID im result-Objekt vorhanden ist
         if (result && result.id) {
           const newEmployeeId = result.id;
 
-          // Schließe den Dialog
           this.dialogRef.close(newEmployeeId);
 
-          // Navigiere zur Detailseite des neuen Mitarbeiters
           this.router.navigate(['/employee', newEmployeeId]);
         }
       },

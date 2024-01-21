@@ -1,14 +1,12 @@
 import { Component } from '@angular/core';
-import {MatIconModule} from "@angular/material/icon";
+import { MatIconModule } from '@angular/material/icon';
 
 @Component({
   selector: 'app-toggle-sort-button',
   standalone: true,
-  imports: [
-    MatIconModule
-  ],
+  imports: [MatIconModule],
   templateUrl: './toggle-sort-button.component.html',
-  styleUrls: ['./toggle-sort-button.component.css'] // styleUrl zu styleUrls ändern
+  styleUrls: ['./toggle-sort-button.component.css'],
 })
 export class ToggleSortButtonComponent {
   isToggled = false;

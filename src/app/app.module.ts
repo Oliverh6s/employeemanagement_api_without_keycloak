@@ -26,10 +26,8 @@ import { ToggleSortButtonComponent } from './components/partials/toggle-sort-but
     HeaderComponent,
     DetailViewComponent,
     EmployeeListComponent,
-    EmployeeDialogComponent,    
+    EmployeeDialogComponent,
     EditDialogComponent,
-    
-    
   ],
   imports: [
     MatCardModule,
@@ -46,7 +44,6 @@ import { ToggleSortButtonComponent } from './components/partials/toggle-sort-but
     HttpClientModule,
     AppRoutingModule,
     MatDialogModule,
-
   ],
   providers: [],
   bootstrap: [AppComponent],

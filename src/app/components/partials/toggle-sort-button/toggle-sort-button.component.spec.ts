@@ -8,10 +8,9 @@ describe('ToggleSortButtonComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [ToggleSortButtonComponent]
-    })
-    .compileComponents();
-    
+      imports: [ToggleSortButtonComponent],
+    }).compileComponents();
+
     fixture = TestBed.createComponent(ToggleSortButtonComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
