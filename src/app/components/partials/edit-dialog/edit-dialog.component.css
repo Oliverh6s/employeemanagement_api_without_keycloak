@@ -115,37 +115,9 @@ h1 {
 .mat-mdc-raised-button.color-button:valid {
   background-color: green;
 }
-.buttondinge {
-  border-radius: 8px;
-  border-style: none;
-  box-sizing: border-box;
-  color: var(--main-text-color);
-  cursor: pointer;
-  display: inline-block;
-  font-family: "Haas Grot Text R Web", "Helvetica Neue", Helvetica, Arial,
-    sans-serif;
-  font-size: 14px;
-  font-weight: 500;
-  height: 40px;
-  line-height: 20px;
-  list-style: none;
-  margin: 0;
-  outline: none;
-  padding: 10px 16px;
-  position: relative;
-  text-align: center;
-  text-decoration: none;
-  transition: color 100ms;
-  vertical-align: baseline;
-  user-select: none;
-  -webkit-user-select: none;
-  touch-action: manipulation;
-}
 
-.buttondinge:disabled {
-  background-color: #9b9b9b;
-}
-
-.buttondinge:valid {
-  background-color: green;
+.mat-mdc-raised-button.color-button:disabled {
+  background-color: var(
+    --disabled-button-grey
+  ); /* Hintergrundfarbe für den deaktivierten Zustand */
 }

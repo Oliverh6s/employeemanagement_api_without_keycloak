@@ -115,3 +115,7 @@ h1 {
 .mat-mdc-raised-button.color-button:valid {
   background-color: green;
 }
+
+.mat-mdc-raised-button.color-button:disabled {
+  background-color: var(--disabled-button-grey);
+}

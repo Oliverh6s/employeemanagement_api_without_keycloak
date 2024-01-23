@@ -72,7 +72,7 @@ body {
   --hover-button-blue: #1e5f74;
   --main-submit-green: #4caf50;
   --hover-submit-green: #45a049;
-  --disabled-button-grey: #555;
+  --disabled-button-grey: #454545;
   --hover-button-grey: #424141;
   --main-bg-color: #383a3f;
   --font-color-primary: #fff;
@@ -91,7 +91,7 @@ body.Light {
   --hover-button-blue: #1e5f74;
   --main-submit-green: #4caf50;
   --hover-submit-green: #45a049;
-  --disabled-button-grey: #555;
+  --disabled-button-grey: #919191;
   --hover-button-grey: #424141;
   --main-bg-color: #dcdcdc;
   --font-color-primary: #454545;
