@@ -42,7 +42,6 @@ export class EmployeeDeleteDialogComponent {
       )
       .subscribe((response) => {
         console.log('Employee erfolgreich gelöscht:', response);
-        this.employeeService.triggerAction();
         this.router.navigate(['/']);
         this.handleClose();
       });

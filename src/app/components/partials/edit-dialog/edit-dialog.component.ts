@@ -53,7 +53,6 @@ export class EditDialogComponent implements OnInit {
       .subscribe(
         (response) => {
           console.log('Mitarbeiter erfolgreich aktualisiert:', response);
-          this.employeeService.triggerAction(); //Warum geht das nicht?!?!???!!
           this.handleClose();
         },
         (error) => {
