@@ -117,7 +117,5 @@ h1 {
 }
 
 .mat-mdc-raised-button.color-button:disabled {
-  background-color: var(
-    --disabled-button-grey
-  ); /* Hintergrundfarbe für den deaktivierten Zustand */
+  background-color: var(--disabled-button-grey);
 }

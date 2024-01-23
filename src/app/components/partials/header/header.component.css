@@ -144,13 +144,7 @@ header {
   height: 0;
 }
 
-.colorPickerBtn {
-  border-radius: 15px;
-  border: none;
-  background: none;
-  margin-left: 85%;
-  color: var(--main-green);
-}
+
 
 img {
   height: 30px;

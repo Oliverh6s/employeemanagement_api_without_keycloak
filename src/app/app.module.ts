@@ -6,7 +6,6 @@ import { HttpClientModule } from '@angular/common/http';
 import { MatIconModule } from '@angular/material/icon';
 import { MatDialogModule } from '@angular/material/dialog';
 import { FormsModule } from '@angular/forms';
-import { ColorPickerModule } from 'ngx-color-picker';
 import { MatInputModule } from '@angular/material/input';
 import { MatButtonModule } from '@angular/material/button';
 import { MatCardModule } from '@angular/material/card';
@@ -40,7 +39,7 @@ import { ToggleSortButtonComponent } from './components/partials/toggle-sort-but
     MatIconModule,
     MatDialogModule,
     FormsModule,
-    ColorPickerModule,
+  
     BrowserAnimationsModule,
     HttpClientModule,
     AppRoutingModule,

@@ -10,7 +10,7 @@
 .detailContent {
   height: 100%;
   background-color: var(--main-bg-color);
-  color: var(--main-text-color); 
+  color: var(--main-text-color);
 }
 
 .tile:hover {
@@ -21,7 +21,7 @@
   grid-area: buttons;
   display: flex;
   justify-content: flex-end;
-  align-items: flex-end; 
+  align-items: flex-end;
   margin-top: auto;
 }
 
@@ -40,13 +40,13 @@
 .editButton:hover,
 .deleteButton:hover {
   background-color: var(--hover-button-blue);
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); 
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 
 .noEmployeeBackground {
   padding: 40px;
-  height: calc(100vh - 60px); 
-  color: var(--main-text-color); 
+  height: calc(100vh - 60px);
+  color: var(--main-text-color);
 }
 
 .noEmployeeDiv {
