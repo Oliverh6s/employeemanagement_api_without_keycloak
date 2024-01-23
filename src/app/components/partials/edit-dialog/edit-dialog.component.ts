@@ -31,7 +31,6 @@ export class EditDialogComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    // Lade bereits vorhandene Daten beim Initialisieren des Dialogs
     this.tempFirstName = this.employeeData.firstName;
     this.tempLastName = this.employeeData.lastName;
     this.tempPhone = this.employeeData.phone;
@@ -41,7 +40,6 @@ export class EditDialogComponent implements OnInit {
   }
 
   updateEmployee() {
-    // Übernehme die Änderungen nur, wenn der Button gedrückt wird
     this.employeeData.firstName = this.tempFirstName;
     this.employeeData.lastName = this.tempLastName;
     this.employeeData.phone = this.tempPhone;
@@ -55,6 +53,7 @@ export class EditDialogComponent implements OnInit {
       .subscribe(
         (response) => {
           console.log('Mitarbeiter erfolgreich aktualisiert:', response);
+          this.employeeService.triggerAction(); //Warum geht das nicht?!?!???!!
           this.handleClose();
         },
         (error) => {
@@ -64,10 +63,6 @@ export class EditDialogComponent implements OnInit {
   }
 
   handleClose() {
-    this.dialogRef.close();
-  }
-
-  abbrechen() {
     this.dialogRef.close();
   }
 }

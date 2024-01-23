@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { catchError, Observable, throwError } from 'rxjs';
+import { BehaviorSubject, catchError, Observable, throwError } from 'rxjs';
 import { Employees } from '../shared/models/employees';
 import { Employee } from '../Employee';
 
@@ -9,6 +9,13 @@ import { Employee } from '../Employee';
 })
 export class EmployeeService {
   private apiUrl = 'http://localhost:8089/employees';
+
+  private actionSubject = new BehaviorSubject<void | null>(null);
+  action$ = this.actionSubject.asObservable();
+
+  triggerAction() {
+    this.actionSubject.next(null);
+  }
 
   constructor(private http: HttpClient) {}
 
@@ -20,7 +27,7 @@ export class EmployeeService {
     return this.http.get<Employees>(`${this.apiUrl}/${employeeId}`).pipe(
       catchError((error: any) => {
         console.error('Error in getEmployeeById:', error);
-        throw error; 
+        throw error;
       })
     );
   }

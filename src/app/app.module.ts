@@ -10,6 +10,7 @@ import { ColorPickerModule } from 'ngx-color-picker';
 import { MatInputModule } from '@angular/material/input';
 import { MatButtonModule } from '@angular/material/button';
 import { MatCardModule } from '@angular/material/card';
+import { EmployeeService } from './services/employee.Service';
 
 import { EditDialogComponent } from './components/partials/edit-dialog/edit-dialog.component';
 import { AppRoutingModule } from './app-routing.module';
@@ -26,10 +27,8 @@ import { ToggleSortButtonComponent } from './components/partials/toggle-sort-but
     HeaderComponent,
     DetailViewComponent,
     EmployeeListComponent,
-    EmployeeDialogComponent,    
+    EmployeeDialogComponent,
     EditDialogComponent,
-    
-    
   ],
   imports: [
     MatCardModule,
@@ -46,9 +45,8 @@ import { ToggleSortButtonComponent } from './components/partials/toggle-sort-but
     HttpClientModule,
     AppRoutingModule,
     MatDialogModule,
-
   ],
-  providers: [],
+  providers: [EmployeeService],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

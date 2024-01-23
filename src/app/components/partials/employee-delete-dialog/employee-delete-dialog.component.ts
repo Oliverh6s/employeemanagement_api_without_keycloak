@@ -1,4 +1,4 @@
-import { Component, Inject } from '@angular/core';
+import { Component, EventEmitter, Inject } from '@angular/core';
 import {
   MAT_DIALOG_DATA,
   MatDialogActions,
@@ -30,9 +30,6 @@ export class EmployeeDeleteDialogComponent {
     this.employeeData = data.employee;
   }
 
-  handleClose() {
-    this.dialogRef.close();
-  }
   handleDeleteEmployee() {
     const employeeId: number = this.employeeData.id;
     this.employeeService
@@ -45,8 +42,13 @@ export class EmployeeDeleteDialogComponent {
       )
       .subscribe((response) => {
         console.log('Employee erfolgreich gelöscht:', response);
-        this.handleClose();
+        this.employeeService.triggerAction();
         this.router.navigate(['/']);
+        this.handleClose();
       });
+  }
+
+  handleClose() {
+    this.dialogRef.close();
   }
 }

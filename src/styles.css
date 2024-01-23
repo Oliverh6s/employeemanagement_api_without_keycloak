@@ -1,7 +1,5 @@
 @import "../node_modules/@angular/material/prebuilt-themes/purple-green.css";
 
-/* You can add global styles to this file, and also import other style files */
-
 @import url("https://fonts.googleapis.com/css2?family=Quicksand&display=swap");
 
 * {
@@ -26,31 +24,25 @@ a {
   text-decoration: none;
 }
 
-/* width */
 ::-webkit-scrollbar {
   width: 8px;
 }
 
-/* Track */
 ::-webkit-scrollbar-track {
-  /*box-shadow: inset 0 0 5px grey;*/
   box-shadow: none;
   border-radius: 10px;
 }
 
-/* Handle */
 ::-webkit-scrollbar-thumb {
   background: #717171;
   border-radius: 10px;
 }
 
-/* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
   background: #838383;
 }
 
 ::selection {
-  /*background: var(--main-green);*/
   background-color: rgba(69, 117, 111, 0.35);
 }
 
@@ -69,7 +61,6 @@ body {
 }
 
 body {
-  /* Dark */
   --toggle-Dark-Light: var(--main-green);
   --main-green: #45756f;
   --main-gb-grey: #20232a;
