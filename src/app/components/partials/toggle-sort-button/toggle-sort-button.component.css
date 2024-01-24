@@ -12,7 +12,7 @@
   cursor: pointer;
 }
 .toggle-button:hover {
-  background-color: #2c3138;
+  background-color: var(--main-bg-color);
   border-color: #2c3138;
   color: var(--main-text-color);
 }

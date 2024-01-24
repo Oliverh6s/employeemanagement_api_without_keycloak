@@ -21,7 +21,7 @@ header {
 }
 
 .logo:hover {
-  background-color: #565555;
+  background-color: var(--main-bg-color);
   cursor: pointer;
 }
 
@@ -143,8 +143,6 @@ header {
   width: 0;
   height: 0;
 }
-
-
 
 img {
   height: 30px;

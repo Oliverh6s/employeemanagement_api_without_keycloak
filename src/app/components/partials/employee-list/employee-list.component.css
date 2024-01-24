@@ -52,20 +52,21 @@ input {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 35px;
-  height: 35px;
+  width: 30px;
+  height: 30px;
   padding: 0;
   position: absolute;
   top: 50%;
   right: 10px;
   transform: translateY(-50%);
   font-weight: bold;
-  background-color: #565555;
-  color: var(--main-text-color);
+  background-color: var(--main-green);
+  color: white;
   border: none;
-  border-radius: 4px;
+  border-radius: 10px;
   cursor: pointer;
   transition: background-color 0.15s ease-in-out;
+  opacity: 60%;
 }
 
 button:hover {

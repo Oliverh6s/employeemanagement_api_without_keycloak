@@ -25,24 +25,6 @@
   margin-top: auto;
 }
 
-/* .editButton,
-.deleteButton {
-  background-color: var(--main-card-bg);
-  color: var(--main-text-color);
-  border: none;
-  border-radius: 6px;
-  padding: 8px 12px;
-  margin-left: 10px;
-  cursor: pointer;
-  transition: background-color 0.3s, box-shadow 0.3s;
-} */
-
-/* .editButton:hover,
-.deleteButton:hover {
-  background-color: var(--hover-button-blue);
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-} */
-
 .noEmployeeBackground {
   padding: 40px;
   height: calc(100vh - 60px);
@@ -100,8 +82,9 @@ mat-card-subtitle {
 .mdc-button.editButton {
   color: var(--main-text-color);
   border-color: var(--main-text-color);
+  margin-right: 0.7rem;
 }
 
 .mdc-button.deleteButton {
-  color: var(--main-text-color);
+  color: white;
 }
