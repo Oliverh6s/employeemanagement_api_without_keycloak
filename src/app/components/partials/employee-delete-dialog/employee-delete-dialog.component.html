@@ -14,14 +14,18 @@
   </div>
   <div class="employee-delete-button-wrapper" mat-dialog-actions>
     <button
-      class="employee-delete-button action-button"
+      mat-raised-button
+      color="warn"
+      t
+      class="delete"
       type="button"
       (click)="handleDeleteEmployee()"
     >
       Löschen
     </button>
     <button
-      class="employee-cancel-button action-button"
+      mat-raised-button
+      class="cancel"
       type="button"
       (click)="handleClose()"
     >
