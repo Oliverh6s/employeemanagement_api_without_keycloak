@@ -129,3 +129,32 @@ h1 {
   border: 1px solid var(--main-text-color);
   color: var(--main-text-color);
 }
+
+
+
+
+
+
+
+
+
+.mdc-button.color-button:valid {
+  background-color: green;
+}
+
+.mdc-button.color-button:disabled {
+  background-color: transparent;
+  color: var(--main-text-color);
+  border-color: var(--main-text-color);
+  opacity: 30%;
+}
+
+.mdc-button.cancel {
+  background-color: transparent;
+  border: 1px solid var(--main-text-color);
+  color: var(--main-text-color);
+}
+
+.mdc-button.deleteButton {
+  color: var(--main-text-color);
+}

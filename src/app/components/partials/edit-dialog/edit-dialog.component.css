@@ -112,16 +112,23 @@ h1 {
   margin-right: 4%;
 }
 
-.mat-mdc-raised-button.color-button:valid {
+.mdc-button.color-button:valid {
   background-color: green;
 }
 
-.mat-mdc-raised-button.color-button:disabled {
-  background-color: var(--disabled-button-grey);
+.mdc-button.color-button:disabled {
+  background-color: transparent;
+  color: var(--main-text-color);
+  border-color: var(--main-text-color);
+  opacity: 30%;
 }
 
-.mat-mdc-raised-button.cancel {
+.mdc-button.cancel {
   background-color: transparent;
   border: 1px solid var(--main-text-color);
+  color: var(--main-text-color);
+}
+
+.mdc-button.deleteButton {
   color: var(--main-text-color);
 }

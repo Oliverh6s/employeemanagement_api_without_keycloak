@@ -36,12 +36,14 @@ p {
   background-color: var(--main-card-bg);
 }
 
-.mat-mdc-raised-button.cancel {
-  background-color: transparent;
-  border: 1px solid var(--main-text-color);
+.mdc-button.delete {
+  background-color: red;
   color: var(--main-text-color);
-  width: 10rem;
+  font-size: 125%;
 }
-.mat-mdc-raised-button.delete {
-  width: 10rem;
+
+.mdc-button.cancel {
+  color: var(--main-text-color);
+  border-color: var(--main-text-color);
+  font-size: 125%;
 }
