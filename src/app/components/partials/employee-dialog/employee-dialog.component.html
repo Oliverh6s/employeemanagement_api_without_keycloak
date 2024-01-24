@@ -1,4 +1,8 @@
-<form #addEmployeeForm="ngForm" (ngSubmit)="addEmployee(addEmployeeForm.value)">
+<form
+  #addEmployeeForm="ngForm"
+  (ngSubmit)="addEmployee(addEmployeeForm.value)"
+  class="fromContainer"
+>
   <h1>Mitarbeiter:in hinzufügen</h1>
 
   <div class="form-row">
@@ -103,7 +107,12 @@
     >
       Hinzufügen
     </button>
-    <button mat-raised-button color="warn" type="button" (click)="abbrechen()">
+    <button
+      mat-raised-button
+      class="cancel"
+      type="button"
+      (click)="abbrechen()"
+    >
       Abbrechen
     </button>
   </div>

@@ -1,3 +1,4 @@
+import { MatButtonModule } from '@angular/material/button';
 import { Component, EventEmitter, Inject } from '@angular/core';
 import {
   MAT_DIALOG_DATA,
@@ -14,7 +15,12 @@ import { Router } from '@angular/router';
 @Component({
   selector: 'app-employee-delete-dialog',
   standalone: true,
-  imports: [MatDialogTitle, MatDialogContent, MatDialogActions],
+  imports: [
+    MatDialogTitle,
+    MatDialogContent,
+    MatDialogActions,
+    MatButtonModule,
+  ],
   templateUrl: './employee-delete-dialog.component.html',
   styleUrl: './employee-delete-dialog.component.css',
 })

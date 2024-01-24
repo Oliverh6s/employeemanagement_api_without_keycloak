@@ -15,16 +15,7 @@
   background-color: var(--main-button-red);
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
-.employee-cancel-button {
-  border: 1px solid rgba(255, 255, 255, 0.8);
-  background-color: unset;
-  color: var(--main-text-color);
-  transition: border-color 0.2s ease-in-out, color 0.2s ease-in-out;
-}
-.employee-cancel-button:hover {
-  border: 1px solid var(--main-text-color);
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-}
+
 .employee-delete-button-wrapper {
   display: flex;
   flex-direction: row;
@@ -43,4 +34,14 @@ p {
 
 .employee-delete-dialog-form {
   background-color: var(--main-card-bg);
+}
+
+.mat-mdc-raised-button.cancel {
+  background-color: transparent;
+  border: 1px solid var(--main-text-color);
+  color: var(--main-text-color);
+  width: 10rem;
+}
+.mat-mdc-raised-button.delete {
+  width: 10rem;
 }

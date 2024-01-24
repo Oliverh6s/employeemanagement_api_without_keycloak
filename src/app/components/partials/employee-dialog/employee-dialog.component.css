@@ -1,3 +1,7 @@
+.fromContainer {
+  background-color: var(--main-card-bg);
+}
+
 .mat-dialog-container {
   max-width: 600px;
   width: 100%;
@@ -118,4 +122,10 @@ h1 {
 
 .mat-mdc-raised-button.color-button:disabled {
   background-color: var(--disabled-button-grey);
+}
+
+.mat-mdc-raised-button.cancel {
+  background-color: transparent;
+  border: 1px solid var(--main-text-color);
+  color: var(--main-text-color);
 }
