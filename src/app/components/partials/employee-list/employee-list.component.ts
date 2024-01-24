@@ -61,9 +61,14 @@ export class EmployeeListComponent implements OnInit {
   selectEmployee(index: number) {
     this.selectedEmployeeIndex = index;
   }
-
   ngOnInit() {
-    this.loadAndSortEmployees();
+    this.activatedRoute.queryParams.subscribe((params) => {
+      const selectedEmployee = params['selectedEmployee'];
+      this.loadAndSortEmployees();
+      if (selectedEmployee) {
+        this.selectEmployee(+selectedEmployee);
+      }
+    });
   }
 
   loadAndSortEmployees() {
@@ -100,7 +105,9 @@ export class EmployeeListComponent implements OnInit {
   }
 
   navigateToDetail(employeeId: number) {
-    this.router.navigate(['/employee', employeeId]);
+    this.router.navigate(['/employee', employeeId], {
+      queryParams: { selectedEmployee: employeeId },
+    });
   }
 
   openAddEmployeeDialog() {
