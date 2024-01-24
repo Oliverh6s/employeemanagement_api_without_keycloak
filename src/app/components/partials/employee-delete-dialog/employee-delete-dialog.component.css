@@ -37,8 +37,8 @@ p {
 }
 
 .mdc-button.delete {
-  background-color: red;
   color: white;
+  background-color: #cc1d1d;
 }
 
 .mdc-button.cancel {

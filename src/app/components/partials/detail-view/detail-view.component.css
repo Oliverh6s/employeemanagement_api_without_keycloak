@@ -60,10 +60,6 @@
   margin: 0;
 }
 
-.deleteButton {
-  background-color: #cc1d1d;
-}
-
 mat-card {
   background-color: var(--main-card-bg);
   color: var(--main-text-color);
@@ -87,4 +83,5 @@ mat-card-subtitle {
 
 .mdc-button.deleteButton {
   color: white;
+  background-color: #cc1d1d;
 }
