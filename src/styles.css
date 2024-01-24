@@ -43,7 +43,8 @@ a {
 }
 
 ::selection {
-  background-color: rgba(69, 117, 111, 0.35);
+  background-color: var(--main-green);
+  color: white;
 }
 
 html,
