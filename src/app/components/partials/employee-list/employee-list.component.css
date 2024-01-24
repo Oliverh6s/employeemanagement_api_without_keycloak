@@ -178,6 +178,9 @@ input:focus {
 }
 
 .einzelnerMitarbeiter.selected {
-  background: rgba(69, 117, 111, 0.3);
-  border: 1px solid rgb(113, 141, 133);
+  background: var(--main-green);
+}
+
+.einzelnerMitarbeiter.einzelnerMitarbeiter.selected:hover {
+  color: var(--main-text-color);
 }
